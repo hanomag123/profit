@@ -82,6 +82,27 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     }
 });
+
+const swiper2 = new Swiper(".subscribe__swiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  // navigation: {
+  //     prevEl: ".copy-block__next",
+  //     nextEl: ".copy-block__prev",
+  // },
+  breakpoints: {
+      // when window width is >= 1024px
+      1024: {
+          slidesPerView: 5,
+          spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+    },
+  }
+});
+
 })
 
 

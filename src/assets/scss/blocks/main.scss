@@ -200,6 +200,120 @@
       }
     }
   }
+
+  section.subscribe.page-wrapper {
+    display: grid;
+    grid-template-columns: 2.5rem calc(100% - 4.5rem);
+    column-gap: 2.2rem;
+    div {
+  
+    }
+  
+    div.subscribe__container.pl4 {
+      padding-top: 8rem;
+      padding-bottom: 10rem;
+      h2.ex76 {
+  
+      }
+  
+      div.subscribe__price {
+        padding-top: 6rem;
+        div.subscribe__price-block.br5 {
+          border: 0.1rem solid #AFC7B1;
+          padding: 1.5rem;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          div.df {
+            display: flex;
+            justify-content: space-between;
+            span.bold30 {
+  
+            }
+  
+            div.price.ex24.green {
+              span.price__numb {
+  
+              }
+  
+              span.price__month {
+  
+              }
+            }
+          }
+  
+          div.dep.df {
+            padding-top: 1rem;
+            span.dep__name.bold14 {
+  
+            }
+  
+            span.ex18.orange {
+  
+            }
+          }
+  
+          div.line {
+
+            height: 0.1rem;
+            width: 100%;
+            background-color: #AFC7B1;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+          }
+  
+          div.table {
+            display: grid;
+            grid-template-columns: repeat(3, max-content);
+            column-gap: 2.3rem;
+            padding-bottom: 2rem;
+            div {
+              display: flex;
+              flex-direction: column;
+              row-gap: 0.5rem;
+            }
+            div.table__name.bold14 {
+              
+            }
+  
+            div.reg14 {
+            }
+  
+            div.ex20 {
+              text-align: center;
+            }
+          }
+          div.commision {
+            div.bold16 {
+          
+            }
+          
+            div.commision__container {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              padding-bottom: 3.5rem;
+              padding-top: 0.5rem;
+              div.commision__container-item {
+                display: flex;
+                flex-direction: column;
+                span {
+                  padding-top: 0.5rem;
+                  &:first-child {
+                    padding-top: 0;
+                  }
+                }
+              }
+            }
+          }
+  
+          button.page-button {
+            margin-top: auto;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
 .reg14 {
@@ -235,6 +349,11 @@
 .reg30--orange {
   color: $orange;
 }
+.bold14 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
 .bold16 {
   font-family: 'Raleway';
   font-style: normal;
@@ -246,6 +365,29 @@
   font-weight: 700;
   font-size: 2.2rem;
   line-height: 2.6rem;
+}
+.bold30 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+.ex18 {
+  font-weight: 800;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+}
+
+.ex20 {
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.3rem;
+}
+
+.ex24 {
+  font-weight: 800;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
 }
 .ex76 {
   font-weight: 800;
