@@ -1,4 +1,271 @@
 
 .main {
+  .copy-block {
+    display: grid;
+    grid-template-columns: 2.5rem 92rem 77rem;
+    column-gap: 2.2rem;
+    padding-top: 13rem;
+    padding-bottom: 12rem;
+    div.copy-block__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      padding-top: 4.3rem;
+      h1.ex76 {
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -0.5rem;
+          left: 0;
+          height: 0.3rem;
+          width: 39rem;
+          background-color: $green;
+        }
+      }
     
+      span.reg26 {
+        padding-bottom: 3rem;
+        max-width: 75rem;
+      }
+    
+      button.page-button {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        margin-right: auto;
+      }
+    }
+
+    .copy-block__sw {
+      .swiper-slide {
+        border: 0.1rem solid #AFC7B1;
+        padding-top: 2rem;
+        div.slide-top {
+          display: grid;
+          grid-template-columns: repeat(3, min-content);
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 0.1rem solid $lgreen;
+          padding-bottom: 1.5rem;
+          margin-left: 2rem;
+          margin-right: 2rem;
+          & > div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+          }
+        
+          div.second-block {
+        
+            div.img-spot {
+              width: 8rem;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+          }
+        
+          div.flag-block {
+            width: 2.8rem;
+            height: 2.8rem;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+        .slide-middle {
+          margin-left: 2rem;
+          margin-right: 2rem;
+          padding-top: 1.5rem;
+          .block-komm {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 3.8rem;
+            &>div {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+          }
+        }
+        .slide-bot {
+          .slide-bot__container {
+            position: relative;
+            .slide-bot__text {
+              width: max-content;
+              display: flex;
+              flex-direction: column;
+              gap: 1.5rem;
+              align-items: center;
+              position: absolute;
+              bottom: 2.3rem;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+            .slide-bot__graphik {
+              width: 100%;
+              height: 24rem;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: bottom;
+              }
+            }
+          }
+        }
+      }
+    }
+    div.swiper-container {
+      display: grid;
+      grid-template-columns: 1fr 14rem;
+      button.show-button {
+        border: 0;
+        background-color: transparent;
+        border-radius: 0;
+        padding-top: 4.25rem;
+        padding-left: 12rem;
+        a.bold22.green {
+          i.arrow.right {
+            transform: translate(1rem, -0.5rem) rotate(-45deg);
+            border-color: $green;
+          }
+        }
+      }
+    
+      div.arrow-container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 4.8rem;
+        div {
+          border-radius: 0.5rem;
+          border: 0.1rem solid $green;
+          background-color: transparent;
+          position: relative;
+          width: 6rem;
+          height: 4rem;
+          cursor: pointer;
+          &::before, 
+          &::after {
+            content: '';
+            position: absolute;
+            top: 1.8rem;
+            left: 2rem;
+            height: 0.2rem;
+            background-color: $green;
+            width: 1rem;
+          }
+          &::before {
+            border-left: 0.2rem solid $green;
+            border-bottom: 0.2rem solid $green;
+            height: 1.5rem;
+            width: 1.5rem;
+            top: 1.7rem;
+            left: 1.5rem;
+            background-color: transparent;
+            transform: rotate(45deg) translateY(-50%);
+          }
+          &::after {
+            width: 2rem;
+          }
+        }
+        div.copy-block__next {
+    
+        }
+    
+        div.copy-block__prev {
+          transform: rotate(180deg);
+        }
+      }
+    
+      div.swiper-progressbar {
+        position: relative;
+        margin-top: 4.8rem;
+        width: 100%;
+        height: 0.1rem;
+        background-color: $lgreen;
+        grid-column: 2 span;
+        .swiper-pagination-progressbar-fill {
+          height: 0.3rem;
+          top: -0.2rem;
+          border-radius: 0.3rem;
+          background-color: $green;
+        }
+      }
+    }
+  }
+}
+
+.reg14 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+.reg16 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+.reg16--green {
+  color: $green;
+}
+.reg16--orange {
+  color: $orange;
+}
+.reg30 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  
+  /* Зеленый */
+
+}
+.reg30--green {
+  color: $green;
+}
+.reg30--orange {
+  color: $orange;
+}
+.bold16 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+.bold22 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+}
+.ex76 {
+  font-weight: 800;
+  font-size: 7.6rem;
+  line-height: 9.1rem;
+}
+
+.reg26 {
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 3.4rem;
+}
+
+.pl4 {
+  padding-left: 4.3rem;
+}
+
+.green {
+  color: $green;
+}
+.orange {
+  color: $orange;
 }

@@ -6,21 +6,16 @@
 html {
   box-sizing: border-box;
   font-size: calc(100vw / 1920 * 10);
-  font-size: 10px;
   @include breakpoint($cos-bp) {
-    font-size: calc(100vw / 1330 * 10);
+    font-size: calc(100vw / 1440 * 10);
   }
 
   @include breakpoint($xl-bp) {
     font-size: calc(100vw / 1024 * 10);
   }
 
-  @include breakpoint($jb-bp) {
-    font-size: calc(100vw / 850 * 10);
-  }
-
   @include breakpoint($lb-bp) {
-    font-size: calc(100vw / 650 * 10);
+    font-size: calc(100vw / 768 * 10);
   }
 
 
@@ -28,9 +23,17 @@ html {
     font-size: calc(100vw / 375 * 10);
   }
 
-  
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  font-family: 'Raleway';
+  font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
+.page {
+  overflow: hidden;
+  width: 100%;
+}
 
 
 *,
@@ -72,4 +75,49 @@ svg {
 
 .show {
   display: block;
+}
+
+.br5 {
+  border-radius: 0.5rem;
+}
+
+.br10 {
+  border-radius: 1rem;
+}
+
+.page {
+  background: linear-gradient(180deg, #F1FFEA 0%, #FFFFFF 100%);
+}
+
+.page-button {
+  border: 0.1rem solid $green;
+  background-color: $green;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: $white;
+  border-radius: 0.5rem;
+  a {
+    width: 100%;
+    height: 100%;
+    color: $white;
+    font-weight: 700;
+    text-align: center;
+  }
+  &:hover {
+    background-color: $orange;
+    border-color: $orange;
+  }
+}
+
+.page-wrapper {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.bold22 {
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  font-weight: 700;
 }

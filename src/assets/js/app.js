@@ -57,6 +57,31 @@ document.addEventListener("DOMContentLoaded", () => {
   if (menu && menuButton) {
     new Menu(menu, menuButton)
   }
+
+
+  const swiper = new Swiper(".copy-block__sw", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    },
+    navigation: {
+        prevEl: ".copy-block__next",
+        nextEl: ".copy-block__prev",
+    },
+    pagination: {
+      type: 'progressbar',
+      el: '.swiper-progressbar'
+    },
+    breakpoints: {
+        // when window width is >= 1024px
+        1025: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+    }
+});
 })
 
 
