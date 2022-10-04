@@ -103,6 +103,42 @@ const swiper2 = new Swiper(".subscribe__swiper", {
   }
 });
 
+const swiper4 = new Swiper(".rewievs__swiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  navigation: {
+      prevEl: ".rewievs__next",
+      nextEl: ".rewievs__prev",
+  },
+  breakpoints: {
+      // when window width is >= 1024px
+      1024: {
+          slidesPerView: 2.9,
+          spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+    },
+  }
+});
+
+
+
+let acc = document.getElementsByClassName("accordion");
+let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
 })
 
 
