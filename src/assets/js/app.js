@@ -139,6 +139,20 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+const emails = document.querySelectorAll('input[type="email"')
+
+if (emails.length>0) {
+  emails.forEach(el => {
+    el.addEventListener('input', () => {
+      if (event.target.value !== '') {
+        event.target.nextElementSibling.style.setProperty('display', 'none')
+      } else {
+        event.target.nextElementSibling.style.setProperty('display', 'inline-block')
+      }
+    })
+  })
+}
 })
 
 

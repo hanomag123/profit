@@ -837,7 +837,7 @@ section.help {
             position: absolute;
             top: -2rem;
             width: 28.9rem;
-            height: 0.1rem;
+            height: 0.2rem;
             background: linear-gradient(to right, $green, transparent);
           }
           p {
@@ -853,7 +853,7 @@ section.help {
         div.top-block {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 4rem;
+          gap: 3.9rem;
           div.top-block__title {
             grid-column: 2 span;
             text-align: center;
@@ -921,12 +921,88 @@ section.help {
           .bottom-block__wrapper {
             display: flex;
             gap: 3rem;
+            a {
+              width: 4.6rem;
+              height: 4.6rem;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
           }
         }
       }
     }
   }
 }
+
+
+section.join{
+
+  div.join__wrapper {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+      margin-right: 5rem;
+      width: min-content;
+      h3.ex50 {
+        padding-bottom: 3.5rem;
+        width: max-content;
+      }
+      padding: 5rem 10rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      border: 0.1rem solid #AFC7B1;
+      border-radius: 0.5rem;
+      .ref {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        span {
+          margin-right: 1.2rem;
+          margin-left: 1.2rem;
+        }
+      }
+      input {
+        padding: 1.5rem 2rem;
+        border: 0.1rem solid #888888;
+        border-radius: 0.5rem;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+      }
+
+      span {
+
+      }
+
+      div.checkbox-wrapper {
+        margin-right: 1.2rem;
+        margin-left: 1.2rem;
+        div.custom-checkbox {
+
+        }
+
+        span {
+
+        }
+      }
+
+      button.page-button.bold22 {
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+      }
+    }
+  }
+}
+
 }
 
 .icon-block {
@@ -953,8 +1029,54 @@ section.help {
   transition: 0.4s;
 }
 
-/* Добавить цвет фона для кнопки, если она нажата (добавить .активный класс с JS), а при наведении на него курсора мыши (наведите курсор) */
-.active, .accordion:hover {
+/*Checkboxes styles*/
+input[type="checkbox"] { width: 0; height: 0;}
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 3.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: $black;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border: 0.1rem solid #888888;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .6;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 1rem;
+  top: -0.5rem;
+  left: 0.5rem;
+  border-radius: 0;
+  border-color: $green;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /* Стиль аккордеон панели. Примечание: скрыто по умолчанию */
@@ -963,6 +1085,41 @@ section.help {
   overflow: hidden;
   transition: max-height 0.2s ease-out, margin-top 0.2s ease-out;
 }
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+input[required]:not([type="checkbox"]) + label {
+  font-family: Arial;
+  position: absolute;
+  left: 3.2rem;
+  top:50%;
+  transform: translateY(-50%);
+  // top: 1rem;
+  // left: -16.6rem; /* the negative of the input width */
+}
+
+input[required]:not([type="checkbox"]) + label:after {
+  content:' *';
+  color: red;
+  font-size: 1.5rem;
+}
+
+/* show the placeholder when input has no content (no content = invalid) */
+input[required]:invalid:not([type="checkbox"]) + label {
+  display: inline-block;
+}
+
+/* hide the placeholder when input has some text typed in */
+input[required]:valid:not([type="checkbox"]) + label{
+  display: none;
+}
+input::-webkit-input-placeholder { color: $black; }
+input::-moz-placeholder { color: $black; }
+
 @-moz-keyframes spin { 
   100% { -moz-transform: rotate(360deg); } 
 }
@@ -1012,6 +1169,12 @@ section.help {
 }
 .reg30--orange {
   color: $orange;
+}
+
+.med14 {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
 }
 
 .sm26 {
