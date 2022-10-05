@@ -4,11 +4,125 @@
   right: 0;
   z-index: 1;
   transform: translateX(100%);
-  height: 100%;
-  width: 30%;
-  background-color: lightblue;
-  transition: all 1s ease;
-  display: none;
+  height: 100vh;
+  overflow: scroll;
+  width: 100%;
+  background-color: $white;
+  transition: transform 0.5s ease-in-out;
+  // display: none;
+  padding: 2rem;
+  padding-bottom: 4.1rem;
+  padding-top: 11.42rem;
+
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+
+      div.social {
+      display: flex;
+      gap: 1.5rem;
+      a {
+        display: block;
+        width: 4.4rem;
+        height: 4.4rem;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          filter: brightness(0);
+          &:hover {
+            transition: filter 0.5s ease;
+            filter: brightness(1);
+          }
+        }
+      }
+    }
+
+    .coins-container {
+      .imgContainer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 8rem;
+        height: 8rem;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .first-coin {
+        top: 10rem;
+        right: 31rem;
+      }
+      .second-coin {
+        width: 13rem;
+        height: 13rem;
+        top: 20rem;
+        right: 8rem;
+      }
+      .third-coin {
+        top: 38.4rem;
+        right: 29.5rem;
+        height: 8.5rem;
+        width: 8.5rem;
+      }
+      .forth-coin {
+        width: 8.5rem;
+        height: 8.5rem;
+        top: 50rem;
+        right: 9rem;
+      }
+      .fifth-coin {
+        top: 56.5rem;
+    right: 25.5rem;
+
+    width: 11rem;
+    height: 11rem;
+      }
+
+    }
+
+    div.contacts {
+      padding-top: 12rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      div.contacts__title.ex26 {
+    
+      }
+    
+      a.sm18.info {
+    
+      }
+    
+      div.social {
+        a {
+          img {
+    
+          }
+        }
+      }
+    }
+
+    button.page-button {
+      margin-top: auto;
+      margin-left: 5.6rem;
+      height: min-content;
+      a {
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+      }
+    }
 }
 
 .menu--open {
@@ -16,22 +130,60 @@
 }
 
 .menu-button {
-  width: 30px;
-  height: 30px;
+  width: 4rem;
+  height: 3.4rem;
 
-  background-color: red;
-
-  position: absolute;
-
-  right: 0;
-  top: 0;
+  background-color: transparent;
+  border: 0;
 
   z-index: 3;
   display: none;
+  position: relative;
+  div.burger-button-close {
+    #first-line-burger,
+    #second-line-burger,
+    #third-line-burger {
+        width: 100%;
+        height: 0.2rem;
+        background-color: $black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-origin: center center;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    div#first-line-burger {
+        top: 0%;
+    }
+    div#third-line-burger {
+        top: unset;
+        bottom: 0%;
+    }
+  }
+  @include breakpoint($lb-bp) {
+    display: block;
+    margin-left: 3rem;
+  }
 }
 
 .menu-button--active {
-
+  div.burger-button-close {
+    div#first-line-burger {
+      top: 50%;
+      transform: translateX(-50%) rotate(45deg);
+    }
+    #second-line-burger {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    div#third-line-burger {
+      top: 50%;
+      bottom: 0;
+      transform: translateX(-50%) rotate(-45deg);
+    }
+  }
 }
 
 .overlay {

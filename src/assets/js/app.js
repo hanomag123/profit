@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.menu = typeof menuElement === "string" ? document.querySelector(menuElement) : menuElement
       this.button = typeof buttonElement === "string" ? document.querySelector(buttonElement) : buttonElement
       this.overlay = document.createElement('div')
+      this.buttons = this.menu.querySelectorAll('a')
       this.overlay.hidden = true
       this._init()
     }
@@ -17,6 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       this.overlay.addEventListener('click', this.toggleMenu.bind(this))
       this.button.addEventListener('click', this.toggleMenu.bind(this))
+      this.buttons.forEach(el => {
+        el.addEventListener('click', this.toggleMenu.bind(this))
+      })
     }
 
     toggleMenu() {
@@ -41,13 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const scrollLeft = window.pageXOffset  || document.documentElement.scrollLeft;
       
             // if any scroll is attempted, set this to the previous value
-            window.onscroll = function() {
-                window.scrollTo(scrollLeft, scrollTop);
-            };
+            // window.onscroll = function() {
+            //     window.scrollTo(scrollLeft, scrollTop);
+            // };
+            document.body.style.setProperty('overflow', 'hidden')
     }
 
     enableScroll() {
-      window.onscroll = function() {};
+      // window.onscroll = function() {};
+      document.body.style.setProperty('overflow', 'auto')
     }
   }
 
@@ -80,26 +86,42 @@ document.addEventListener("DOMContentLoaded", () => {
             slidesPerView: 2,
             spaceBetween: 20
         },
+        769: {
+          slidesPerView: 2,
+          spaceBetween: 20
+      },
+      376: {
+        slidesPerView: 2,
+        spaceBetween: 20
+    },
     }
 });
 
 const swiper2 = new Swiper(".subscribe__swiper", {
   slidesPerView: 1,
   spaceBetween: 0,
-  // navigation: {
-  //     prevEl: ".copy-block__next",
-  //     nextEl: ".copy-block__prev",
-  // },
+    navigation: {
+      prevEl: ".subscribe__next",
+      nextEl: ".subscribe__prev",
+  },
+  pagination: {
+    type: 'progressbar',
+    el: '.subscribe__progressbar'
+  },
   breakpoints: {
       // when window width is >= 1024px
-      1024: {
+      1025: {
           slidesPerView: 5,
           spaceBetween: 20
       },
-      768: {
+      769: {
         slidesPerView: 2,
         spaceBetween: 20
     },
+    376: {
+      slidesPerView: 2,
+      spaceBetween: 20
+  },
   }
 });
 
@@ -112,14 +134,18 @@ const swiper4 = new Swiper(".rewievs__swiper", {
   },
   breakpoints: {
       // when window width is >= 1024px
-      1024: {
+      1025: {
           slidesPerView: 2.9,
           spaceBetween: 20
       },
-      768: {
+      769: {
         slidesPerView: 2,
         spaceBetween: 20
     },
+    376: {
+      slidesPerView: 2,
+      spaceBetween: 20
+  },
   }
 });
 
@@ -150,6 +176,19 @@ if (emails.length>0) {
       } else {
         event.target.nextElementSibling.style.setProperty('display', 'inline-block')
       }
+    })
+  })
+}
+
+const selectLang = document.querySelectorAll('.select-lang a')
+if (selectLang.length > 0) {
+  selectLang.forEach(el => {
+    el.addEventListener('click', function clickHand (){
+      event.preventDefault()
+      const value = this.innerHTML
+      const prevElem = this.parentElement.previousElementSibling
+
+      prevElem.dataset.text = value
     })
   })
 }
