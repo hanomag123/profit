@@ -518,6 +518,12 @@
         .cont {
           padding-top: 1.5rem;
         }
+
+        @include breakpoint($lb-bp) {
+          .last {
+            padding-top: 0;
+          }
+        }
   
         div.roud-icon {
           display: flex;
@@ -642,7 +648,7 @@
             gap: 3rem;
             @include breakpoint($xl-bp) {
               grid-template-columns: 35.5rem 1fr;
-              grid-template-rows: repeat(2, 25rem) 36rem;
+              grid-template-rows: repeat(2, 26rem) 37rem;
               gap: 2rem;
             }
             div.swiper-slide.profit__container-item {
@@ -652,6 +658,9 @@
               display: flex;
               align-items: center;
               justify-content: center;
+              @include breakpoint($xl-bp) {
+                padding: 0 4.2rem;
+              }
               span.sm26 {
                 padding-top: 1.7rem;
                 position: relative;
@@ -694,7 +703,7 @@
             button.page-button.bold22 {
               margin-top: 4rem;
               @include breakpoint($xl-bp) {
-                height: 3.5rem;
+                height: 2.2rem;
                 margin-top: auto;
               }
             }
@@ -708,6 +717,11 @@
             right: 0;
             width: 13rem;
             height: 13rem;
+            @include breakpoint($lb-bp) {
+              bottom: 2.5rem;
+              top: unset;
+              z-index: 2;
+            }
             img {
               width: 100%;
               height: 100%;
@@ -718,6 +732,14 @@
           .first-coin {
             top: -3rem;
             right: 25rem;
+            @include breakpoint($lb-bp) {
+              bottom: 33.5rem;
+              right: 22rem;
+              width: 7rem;
+              height: 7rem;
+              top: unset;
+              z-index: 2;
+            }
           }
           .second-coin {
             width: 15rem;
@@ -725,10 +747,26 @@
 
             top: 8rem;
             right: 0;
+            @include breakpoint($lb-bp) {
+              bottom: 25.9rem;
+              right: 5rem;
+              width: 7rem;
+              height: 7rem;
+              top: unset;
+              z-index: 2;
+            }
           }
           .third-coin {
             top: 24.4rem;
             right: 21rem;
+            @include breakpoint($lb-bp) {
+              bottom: 18rem;
+              right: 20.5rem;
+              width: 8rem;
+              height: 8rem;
+              top: unset;
+              z-index: 2;
+            }
           }
           .forth-coin {
             width: 14rem;
@@ -736,10 +774,25 @@
 
             top: 36rem;
             right: 1rem;
+            @include breakpoint($lb-bp) {
+              bottom: 6.4rem;
+              right:  9rem;
+              width: 9rem;
+              height: 9rem;
+              top: unset;
+              z-index: 2;
+            }
           }
           .fifth-coin {
             top: 48.5rem;
             right: 19.5rem;
+            @include breakpoint($lb-bp) {
+              bottom: 7.5rem;
+              right: 23.5rem;
+              top: unset;
+              width: 8rem;
+              height: 8rem;
+            }
           }
   
         }
@@ -751,7 +804,9 @@
     padding-top: 10rem;
     padding-bottom: 10rem;
 		// .secure__wrapper
-
+    @include breakpoint($lb-bp) {
+      padding-top: 5rem;
+    }
 		&__wrapper {
       
 		}
@@ -766,7 +821,8 @@
       padding-top: 6rem;
       @include breakpoint($xl-bp) {
         grid-template-columns: 1fr;
-        row-gap: 5rem;
+        row-gap: 4rem;
+        padding-top: 4rem;
       }
 		}
 
@@ -796,10 +852,18 @@
       align-items: center;
       justify-content: center;
       padding-top: 5rem;
+      @include breakpoint($lb-bp) {
+        padding-top: 3rem;
+      }
       button {
         padding-left: 5rem;
         padding-right: 5rem;
         margin-right: 9rem;
+        @include breakpoint($lb-bp) {
+          margin-right: 0;
+          padding-left: 6rem;
+          padding-right: 6rem;
+        }
       }
     }
 }
@@ -807,9 +871,15 @@
 section.partners{
   padding-top: 9.6rem;
   padding-bottom: 10rem;
+  @include breakpoint($lb-bp) {
+    padding-top: 5rem;
+  }
   div.partners__wrapper {
     h2.ex76 {
       padding-bottom: 6rem;
+      @include breakpoint($xl-bp) {
+        padding-bottom: 0;
+      }
     }
 
     div.partners__container {
@@ -817,7 +887,8 @@ section.partners{
       grid-template-columns: min-content 1fr;
       column-gap: 30rem;
       @include breakpoint($xl-bp) {
-        grid-template-columns: 1fr;
+        grid-template-columns: 30rem 1fr;
+        column-gap: 7rem;
       }
       div.partners__left-block {
         @include breakpoint($xl-bp) {
@@ -834,10 +905,17 @@ section.partners{
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          @include breakpoint($xl-bp) {
+            width: 100%;
+            height: 30rem
+          }
           svg {
             fill: transparent;
             stroke: $green;
             height: 16rem;
+            @include breakpoint($xl-bp) {
+              height: 11rem;
+            }
           }
 
           span.bold80.green {
@@ -848,6 +926,9 @@ section.partners{
 
       div.partners__right-block {
         padding-top: 4.5rem;
+        @include breakpoint($xl-bp) {
+          padding-top: 3.9rem;
+        }
         ul {
           display: flex;
           flex-direction: column;
@@ -855,12 +936,18 @@ section.partners{
           li {
             position: relative;
             padding-left: 8.5rem;
+            @include breakpoint($xl-bp) {
+              padding-left: 7rem;
+            }
             &::before {
               content: url('/assets/images/svg/check.svg');
               position: absolute;
               top: 59%;
               transform: translateY(-50%);
               left: 1rem;
+              @include breakpoint($xl-bp) {
+                left: 0;
+              }
             }
           }
         }
@@ -1450,6 +1537,10 @@ input::-moz-placeholder { color: $black; }
   font-weight: 700;
   font-size: 8rem;
   line-height: 9.4rem;
+  @include breakpoint($xl-bp) {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
 }
 
 .ex18 {
