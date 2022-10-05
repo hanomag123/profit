@@ -6,9 +6,6 @@
 html {
   box-sizing: border-box;
   font-size: calc(100vw / 1920 * 10);
-  @include breakpoint($cos-bp) {
-    font-size: calc(100vw / 1440 * 10);
-  }
 
   @include breakpoint($xl-bp) {
     font-size: calc(100vw / 1024 * 10);
@@ -26,6 +23,7 @@ html {
   ::-webkit-scrollbar {
     width: 0;
   }
+  scroll-behavior: smooth;
   font-family: 'Raleway';
   font-feature-settings: 'pnum' on, 'lnum' on;
 }
@@ -87,7 +85,7 @@ svg {
 }
 
 .page {
-  background: linear-gradient(180deg, #F1FFEA 0%, #FFFFFF 100%);
+  background: linear-gradient(180deg, #F1FFEA 0%, #FFFFFF 100vh);
 }
 
 .page-button {
@@ -100,6 +98,10 @@ svg {
   color: $white;
   border-radius: 0.5rem;
   transition: background-color .5s ease-in-out, border-color .5s ease-in-out;
+  @include breakpoint($lb-bp) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
   a {
     width: 100%;
     height: 100%;
@@ -113,18 +115,48 @@ svg {
   }
 }
 
+ul {
+  li {
+    a {
+      &:hover {
+        color: $orange!important;
+      }
+    }
+  }
+}
+
 .page-wrapper {
   padding-left: 8rem;
   padding-right: 8rem;
+  @include breakpoint($xl-bp) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @include breakpoint($lb-bp) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .page-wrapper--left {
   padding-left: 8rem;
   padding-right: 0;
+  @include breakpoint($xl-bp) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @include breakpoint($lb-bp) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .bold22 {
   font-size: 2.2rem;
   line-height: 2.6rem;
   font-weight: 700;
+  @include breakpoint($xl-bp) {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+  }
 }

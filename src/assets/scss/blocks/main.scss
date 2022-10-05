@@ -6,11 +6,21 @@
     column-gap: 2.2rem;
     padding-top: 13rem;
     padding-bottom: 12rem;
+    @include breakpoint($xl-bp) {
+      grid-template-columns: 1fr;
+    }
+    @include breakpoint($lb-bp) {
+      padding-top: 6.5rem;
+    }
     div.copy-block__wrapper {
       display: flex;
       flex-direction: column;
       gap: 5rem;
       padding-top: 4.3rem;
+      @include breakpoint($xl-bp) {
+        padding-bottom: 10rem;
+        gap: 3.5rem;
+      }
       h1.ex76 {
         position: relative;
         &::after {
@@ -21,12 +31,18 @@
           height: 0.3rem;
           width: 39rem;
           background-color: $green;
+          @include breakpoint($lb-bp) {
+            display: none;
+          }
         }
       }
     
       span.reg26 {
         padding-bottom: 3rem;
         max-width: 75rem;
+        @include breakpoint($lb-bp) {
+          padding-bottom: 2.5rem;
+        }
       }
     
       button.page-button {
@@ -35,7 +51,11 @@
         margin-right: auto;
       }
     }
-
+    .copy-block__swiper {
+      box-sizing: border-box;
+      width: 100%;
+      overflow: hidden;
+    }
     .copy-block__sw {
       .swiper-slide {
         border: 0.1rem solid #AFC7B1;
@@ -107,6 +127,11 @@
               bottom: 2.3rem;
               left: 50%;
               transform: translateX(-50%);
+              &:hover {
+                a {
+                  animation: 1s linear 0s infinite alternate pulse;
+                }
+              }
             }
             .slide-bot__graphik {
               width: 100%;
@@ -131,6 +156,16 @@
         border-radius: 0;
         padding-top: 4.25rem;
         padding-left: 12rem;
+        &:hover a {
+          color: $orange;
+        }
+        &:hover {
+          a.bold22.green {
+            i.arrow.right {
+              border-color: $orange;
+            }
+          }
+        }
         a.bold22.green {
           i.arrow.right {
             transform: translate(1rem, -0.5rem) rotate(-45deg);
@@ -160,6 +195,9 @@
     display: flex;
     justify-content: space-between;
     padding-top: 4.8rem;
+    @include breakpoint($lb-bp) {
+      padding-top: 3rem;
+    }
     div {
       border-radius: 0.5rem;
       border: 0.1rem solid $green;
@@ -168,6 +206,7 @@
       width: 6rem;
       height: 4rem;
       cursor: pointer;
+      transition: transform 0.5s ease;
       &::before, 
       &::after {
         content: '';
@@ -191,40 +230,56 @@
       &::after {
         width: 2rem;
       }
-    }
-    div.copy-block__next {
-
+      &:hover {
+        transform: translateX(-1rem);
+      }
     }
 
     div.arrow-container__prev {
       transform: rotate(180deg);
+      transition: transform 0.5s ease;
+      &:hover {
+        transform: translateX(1rem) rotate(180deg);
+      }
     }
   }
 
 
-  section.subscribe.page-wrapper {
+  section.subscribe {
     display: grid;
     grid-template-columns: 2.5rem calc(100% - 4.5rem);
     column-gap: 2.2rem;
-    div {
-  
+    @include breakpoint($xl-bp) {
+      grid-template-columns: 1fr;
     }
   
     div.subscribe__container.pl4 {
       padding-top: 8rem;
       padding-bottom: 10rem;
+      @include breakpoint($xl-bp) {
+        box-sizing: border-box;
+        width: 100%;
+        overflow: hidden;
+        padding-top: 3rem;
+      }
       h2.ex76 {
   
       }
   
       div.subscribe__price {
         padding-top: 6rem;
+        @include breakpoint($lb-bp) {
+          padding-top: 4rem;
+        }
         div.subscribe__price-block.br5 {
           border: 0.1rem solid #AFC7B1;
           padding: 1.5rem;
           height: auto;
           display: flex;
           flex-direction: column;
+          @include breakpoint($lb-bp) {
+            padding: 3.3rem;
+          }
           div.df {
             display: flex;
             justify-content: space-between;
@@ -268,6 +323,9 @@
             grid-template-columns: repeat(3, max-content);
             column-gap: 2.3rem;
             padding-bottom: 2.8rem;
+            @include breakpoint($lb-bp) {
+              justify-content: space-between;
+            }
             div {
               display: flex;
               flex-direction: column;
@@ -316,22 +374,64 @@
           }
         }
       }
+      .arrow-container {
+        display: none;
+        @include breakpoint($lb-bp) {
+          display: flex;
+          width: 14rem;
+          margin-left: auto;
+        }
+      }
+
+      div.subscribe__progressbar {
+        position: relative;
+        margin-top: 4.8rem;
+        width: 100%;
+        height: 0.1rem;
+        background-color: $lgreen;
+        grid-column: 2 span;
+        display: none;
+        @include breakpoint($lb-bp) {
+          display: block;
+        }
+        .swiper-pagination-progressbar-fill {
+          height: 0.3rem;
+          top: -0.2rem;
+          border-radius: 0.3rem;
+          background-color: $green;
+        }
+      }
     }
   }
+
 
   section.itsprofitable {
     padding-top: 10.3rem;
     padding-bottom: 10rem;
+
+    @include breakpoint($lb-bp) {
+      padding-top: 5rem;
+    }
   
     div.itsprofitable__wrapper.pl4 {
       h2.ex76 {
         padding-bottom: 5.5rem;
+        @include breakpoint($lb-bp) {
+          padding-bottom: 2.5rem;
+        }
       }
   
       div.itsprofitable__top-block {
         display: grid;
         grid-template-columns: 33rem 10rem 52rem 10rem 33rem;
         column-gap: 5.5rem;
+        @include breakpoint($xl-bp) {
+          grid-template-columns: 1fr;
+          row-gap: 3rem;
+        }
+        @include breakpoint($lb-bp) {
+          column-gap: 4rem;
+        }
         div.itsprofitable__top-item {
           position: relative;
           height: min-content;
@@ -365,10 +465,17 @@
           }
           ul.reg18 {
             padding-top: 2.5rem;
+            @include breakpoint($xl-bp) {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+            }
             li {
               position: relative;
               padding-left: 2.7rem;
               padding-bottom: 8rem;
+              @include breakpoint($xl-bp) {
+                padding-bottom: 3rem;
+              }
               &::before {
                 content: '';
                 color: $green;
@@ -392,6 +499,19 @@
   
           button.page-button {
             width: 100%;
+            @include breakpoint($xl-bp) {
+              width: 30rem;
+            }
+          }
+        }
+
+        .photos {
+          @include breakpoint($xl-bp) {
+            width: 80%;
+            margin: 0 auto;
+          }
+          @include breakpoint($lb-bp) {
+            width: 70%;
           }
         }
 
@@ -410,6 +530,9 @@
             -webkit-animation:spin 4s linear infinite;
             -moz-animation:spin 4s linear infinite;
             animation:spin 4s linear infinite;
+            @include breakpoint($lb-bp) {
+              height: 7rem;
+            }
             use {
   
             }
@@ -422,17 +545,43 @@
         justify-content: space-between;
         align-items: center;
         padding-top: 9rem;
+        @include breakpoint($xl-bp) {
+          flex-direction: column;
+          row-gap: 5rem;
+        }
         div.itsprofitable__bottom-item {
           display: flex;
           flex-direction: column;
           align-items: center;
-          div.title.ex150.green {
+          @include breakpoint($xl-bp) {
+            justify-content: center;
+            width: 100%;
+          }
+          div.title {
             padding-bottom: 0.5rem;
             position: relative;
+            @include breakpoint($xl-bp) {
+              width: 100%;
+              text-align: center;
+            }
+            @include breakpoint($lb-bp) {
+              padding-bottom: 0;
+            }
           }
       
           span.desc.ex50 {
       
+          }
+        }
+        @include breakpoint($xl-bp) {
+          div.itsprofitable__bottom-item:nth-child(2) div.title {
+            padding-bottom: 3rem;
+            @include breakpoint($lb-bp) {
+              padding-bottom: 4rem;
+            }
+          }
+          div.itsprofitable__bottom-item:nth-child(2) .desc {
+            padding-top: 1rem;
           }
         }
         .flags {
@@ -442,12 +591,18 @@
           transform: translateX(-50%);
           height: 2rem;
           width: 100%;
+          @include breakpoint($xl-bp) {
+            height: 3rem;
+          }
           img {
             position: absolute;
             top: 0;
             width: 100%;
             height: 100%;
             object-fit: contain;
+            @include breakpoint($xl-bp) {
+              left: 0;
+            }
           }
         }
       }
@@ -460,25 +615,36 @@
     padding-top: 10rem;
     padding-bottom: 10rem;
     background: linear-gradient(180deg, #FFFFFF 0%, #F2F2F2 48.44%, #EEFFE7 90.62%, #FFFFFF 99.48%);
-    div {
-  
+    @include breakpoint($lb-bp) {
+      padding-top: 5rem;
     }
   
     div.Capabilities__wrapper {
       h2.ex76 {
         padding-bottom: 6rem;
+        @include breakpoint($lb-bp) {
+          padding-bottom: 4rem;
+        }
       }
   
       div.Capabilities__container {
         display: grid;
         grid-template-columns: 73% 27%;
         position: relative;
+        @include breakpoint($xl-bp) {
+          grid-template-columns: 1fr;
+        }
         div.swiper.Capabilities__swiper {
           div.swiper-wrapper {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 23.5rem 8rem 10rem 11rem;
             gap: 3rem;
+            @include breakpoint($xl-bp) {
+              grid-template-columns: 35.5rem 1fr;
+              grid-template-rows: repeat(2, 25rem) 36rem;
+              gap: 2rem;
+            }
             div.swiper-slide.profit__container-item {
               border: 0.1rem solid $lgreen;
               border-radius: 0.5rem;
@@ -501,20 +667,36 @@
               }
               &:nth-child(2) {
                 grid-row: 2 span;
+                @include breakpoint($xl-bp) {
+                  grid-row: auto;
+                }
               }
               &:nth-child(3) {
                 grid-row: 3 span;
+                @include breakpoint($xl-bp) {
+                  grid-row: auto;
+                }
               }
               &:nth-child(4) {
                 grid-row: 3 span;
+                @include breakpoint($xl-bp) {
+                  grid-row: auto;
+                }
               }
               &:nth-child(5) {
                 grid-row: 2 span;
+                @include breakpoint($xl-bp) {
+                  grid-row: auto;
+                }
               }
             }
   
             button.page-button.bold22 {
               margin-top: 4rem;
+              @include breakpoint($xl-bp) {
+                height: 3.5rem;
+                margin-top: auto;
+              }
             }
           }
         }
@@ -582,6 +764,10 @@
       row-gap: 11.5rem;
       column-gap: 13rem;
       padding-top: 6rem;
+      @include breakpoint($xl-bp) {
+        grid-template-columns: 1fr;
+        row-gap: 5rem;
+      }
 		}
 
 		// .secure__container-item
@@ -630,7 +816,15 @@ section.partners{
       display: grid;
       grid-template-columns: min-content 1fr;
       column-gap: 30rem;
+      @include breakpoint($xl-bp) {
+        grid-template-columns: 1fr;
+      }
       div.partners__left-block {
+        @include breakpoint($xl-bp) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
         div.partners__ball {
           width: 52.4rem;
           height: 52.4rem;
@@ -700,7 +894,14 @@ section.rewievs {
     }
 
     div.rewievs__container {
+      @include breakpoint($xl-bp) {
+        display: grid;
+        width: 100%;
+      }
       div.swiper.rewievs__swiper {
+        box-sizing: border-box;
+        width: 100%;
+        overflow: hidden;
         div.swiper-wrapper {
           div.swiper-slide {
             padding: 4rem;
@@ -795,6 +996,9 @@ section.help {
       display: grid;
       grid-template-columns: 53.7% 1fr;
       gap: 14.4rem;
+      @include breakpoint($xl-bp) {
+        grid-template-columns: 1fr;
+      }
       div.left-block {
         button.accordion {
           background-color: transparent;
@@ -857,6 +1061,9 @@ section.help {
           div.top-block__title {
             grid-column: 2 span;
             text-align: center;
+            @include breakpoint($xl-bp) {
+              display: none;
+            }
           }
         
           .telegram {
@@ -924,6 +1131,10 @@ section.help {
             a {
               width: 4.6rem;
               height: 4.6rem;
+              transition: filter 0.5s ease;
+              &:hover {
+                filter: brightness(0);
+              }
               img {
                 width: 100%;
                 height: 100%;
@@ -949,6 +1160,9 @@ section.join{
     form {
       margin-right: 5rem;
       width: min-content;
+      @include breakpoint($xl-bp) {
+        margin-right: 0;
+      }
       h3.ex50 {
         padding-bottom: 3.5rem;
         width: max-content;
@@ -984,6 +1198,8 @@ section.join{
       }
 
       div.checkbox-wrapper {
+        padding-top: 1.5rem;
+        padding-bottom: 1.2rem;
         margin-right: 1.2rem;
         margin-left: 1.2rem;
         div.custom-checkbox {
@@ -1005,6 +1221,13 @@ section.join{
 
 }
 
+@keyframes pulse {
+  from {
+    transform: scale(0.999);
+  } to {
+    transform: scale(1.2);
+  }
+}
 .icon-block {
   border: 0.1rem solid $green;
   border-radius: 50%;
@@ -1138,6 +1361,7 @@ input::-moz-placeholder { color: $black; }
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.6rem;
+  color: $black;
 }
 .reg16 {
   font-weight: 400;
@@ -1181,6 +1405,7 @@ input::-moz-placeholder { color: $black; }
   font-weight: 600;
   font-size: 2.6rem;
   line-height: 3.1rem;
+  color: $black;
 }
 .bold14 {
   font-weight: 700;
@@ -1215,6 +1440,10 @@ input::-moz-placeholder { color: $black; }
   font-weight: 700;
   font-size: 4rem;
   line-height: 4.7rem;
+  @include breakpoint($lb-bp) {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
 }
 
 .bold80 {
@@ -1240,6 +1469,11 @@ input::-moz-placeholder { color: $black; }
   font-size: 2.4rem;
   line-height: 3.4rem;
 }
+.ex26 {
+  font-weight: 800;
+  font-size: 2.6rem;
+  line-height: 3.1rem;
+}
 .ex50 {
   font-weight: 800;
   font-size: 5rem;
@@ -1249,21 +1483,36 @@ input::-moz-placeholder { color: $black; }
   font-weight: 800;
   font-size: 15rem;
   line-height: 17.6rem;
+  @include breakpoint($xl-bp) {
+    font-size: 10rem;
+    line-height: 12rem;
+  }
 }
 .ex76 {
   font-weight: 800;
   font-size: 7.65rem;
   line-height: 9.1rem;
+  @include breakpoint($xl-bp) {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
 }
 
 .reg26 {
   font-weight: 400;
   font-size: 2.6rem;
   line-height: 3.4rem;
+  @include breakpoint($xl-bp) {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
 }
 
 .pl4 {
   padding-left: 4.3rem;
+  @include breakpoint($xl-bp) {
+    padding-left: 0;
+  }
 }
 
 .green {
@@ -1276,7 +1525,29 @@ input::-moz-placeholder { color: $black; }
   display: grid;
   grid-template-columns: 2.5rem calc(100% - 4.5rem);
   column-gap: 2.2rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
 }
 .nowrap {
   white-space: nowrap;
+  @include breakpoint($xl-bp) {
+    white-space: normal;
+  }
+}
+
+.underline {
+  position: relative;
+  @include breakpoint($lb-bp) {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.7rem;
+      left: 0;
+      width: 100%;
+      height: 0.2rem;
+      background-color: $green;
+    }
+  }
 }
