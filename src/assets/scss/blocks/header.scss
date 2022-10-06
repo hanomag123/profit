@@ -4,11 +4,11 @@
     justify-content: space-between;
     position: relative;
     z-index: 10;
-    @include breakpoint($lb-bp) {
+    @include breakpoint($xl-bp) {
       padding-top: 3.45rem;
-      // position: fixed;
-      // width: 100%;
-      // background-color: #F1FFEA;
+      position: fixed;
+      width: 100%;
+      background-color: #F1FFEA;
     }
     @include breakpoint($sm-bp) {
       padding-top: 2rem;
@@ -20,7 +20,7 @@
       align-items: center;
       column-gap: 1rem;
       position: relative;
-      @include breakpoint($lb-bp) {
+      @include breakpoint($xl-bp) {
         width: 28.2rem;
         grid-template-columns: 5rem 14.2rem 4rem;
       }
