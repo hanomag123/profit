@@ -1,5 +1,14 @@
 
 .main {
+
+  @keyframes btnAnimation {
+    0% { scale: 0.8 }
+    70% { scale: 1.1 }
+    80% { scale: 0.9}
+    90% { scale: 1.05}
+    100% { scale: 1}
+   }
+
   .copy-block {
     display: grid;
     grid-template-columns: 2.5rem 92rem 77rem;
@@ -23,6 +32,8 @@
       }
       h1.ex76 {
         position: relative;
+        display: flex;
+        flex-wrap: wrap;
         &::after {
           content: '';
           position: absolute;
@@ -263,7 +274,7 @@
         padding-top: 3rem;
       }
       h2.ex76 {
-  
+        display: flex;
       }
   
       div.subscribe__price {
@@ -277,6 +288,9 @@
           height: auto;
           display: flex;
           flex-direction: column;
+          animation: btnAnimation 0.3s ease-in-out;
+
+          
           @include breakpoint($lb-bp) {
             padding: 3.3rem;
           }
@@ -416,6 +430,7 @@
     div.itsprofitable__wrapper.pl4 {
       h2.ex76 {
         padding-bottom: 5.5rem;
+        display: flex;
         @include breakpoint($lb-bp) {
           padding-bottom: 2.5rem;
         }
@@ -627,6 +642,7 @@
   
     div.Capabilities__wrapper {
       h2.ex76 {
+        display: flex;
         padding-bottom: 6rem;
         @include breakpoint($lb-bp) {
           padding-bottom: 4rem;
@@ -808,7 +824,9 @@
       padding-top: 5rem;
     }
 		&__wrapper {
-      
+      .ex76 {
+        display: flex;
+      }
 		}
 
 		// .secure__container
@@ -819,6 +837,7 @@
       row-gap: 11.5rem;
       column-gap: 13rem;
       padding-top: 6rem;
+      overflow: hidden;
       @include breakpoint($xl-bp) {
         grid-template-columns: 1fr;
         row-gap: 4rem;
@@ -877,6 +896,8 @@ section.partners{
   div.partners__wrapper {
     h2.ex76 {
       padding-bottom: 6rem;
+      display: flex;
+
       @include breakpoint($xl-bp) {
         padding-bottom: 0;
       }
@@ -977,6 +998,7 @@ section.rewievs {
 
   div.rewievs__wrapper {
     h2.ex76 {
+      display: flex;
       padding-bottom: 6rem;
     }
 
@@ -1064,6 +1086,7 @@ section.help {
   background: linear-gradient(180deg, #FFFFFF 0%, #F2F2F2 48.44%, #EEFFE7 90.62%, #FFFFFF 99.48%);
   div.help__wrapper {
     h2.ex76 {
+      display: flex;
       padding-bottom: 6rem;
     }
 
@@ -1630,6 +1653,7 @@ input::-moz-placeholder { color: $black; }
 
 .underline {
   position: relative;
+  display: flex;
   @include breakpoint($lb-bp) {
     &::after {
       content: '';

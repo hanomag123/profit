@@ -160,3 +160,140 @@ ul {
     line-height: 2.1rem;
   }
 }
+
+
+@keyframes btnAnimation {
+  0% { scale: 0.8 }
+  70% { scale: 1.1 }
+  80% { scale: 0.9}
+  90% { scale: 1.05}
+  100% { scale: 1}
+ }
+
+#animBtn {
+animation: btnAnimation 0.5s ease-in-out;
+}
+
+
+@keyframes coinAnimation1 {
+  0% { 
+      top: -3rem;
+      right: 25rem;
+    }
+
+
+  50% {
+    top: -10rem;
+    right: 20rem;
+  }
+
+
+
+  100% {
+    top: -3rem;
+    right: 25rem;
+  }
+}
+
+#coin1 {
+  animation: coinAnimation1 3s ease-in-out infinite;
+}
+
+
+
+@keyframes coinAnimation2 {
+  0% { 
+    top: 8rem;
+    right: 0;
+    }
+
+
+  50% {
+    top: 15rem;
+    right: -7rem;
+  }
+
+
+
+  100% {
+    top: 8rem;
+    right: 0;
+  }
+}
+
+#coin2 {
+  animation: coinAnimation2 3s ease-in-out infinite;
+}
+
+
+@keyframes coinAnimation3 {
+  0% { 
+    top: 24.4rem;
+    right: 21rem;
+    }
+
+
+  50% {
+    top: 13.4rem;
+    right: 16rem;
+  }
+
+
+
+  100% {
+    top: 24.4rem;
+    right: 21rem;
+  }
+}
+
+#coin3 {
+  animation: coinAnimation3 3s ease-in-out infinite;
+}
+
+@keyframes coinAnimation4 {
+  0% { 
+    top: 36rem;
+    right: 1rem;
+    }
+
+
+  50% {
+    top: 36rem;
+    right: 12rem;
+  }
+
+
+
+  100% {
+    top: 36rem;
+    right: 1rem;
+  }
+}
+
+#coin4 {
+  animation: coinAnimation4 3s ease-in-out infinite;
+}
+
+@keyframes coinAnimation5 {
+  0% { 
+    top: 48.5rem;
+    right: 19.5rem;
+    }
+
+
+  50% {
+    top: 42.5rem;
+    right: 26.5rem;
+  }
+
+
+
+  100% {
+    top: 48.5rem;
+    right: 19.5rem;
+  }
+}
+
+#coin5 {
+  animation: coinAnimation5 3s ease-in-out infinite;
+}

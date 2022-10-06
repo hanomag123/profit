@@ -2,6 +2,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //= components/
+
+SmoothScroll({
+  // Время скролла 400 = 0.4 секунды
+  animationTime    : 1000,
+  // Размер шага в пикселях 
+  stepSize         : 65,
+
+  // Дополнительные настройки:
+  
+  // Ускорение 
+  accelerationDelta : 30,  
+  // Максимальное ускорение
+  accelerationMax   : 2,   
+
+  // Поддержка клавиатуры
+  keyboardSupport   : true,  
+  // Шаг скролла стрелками на клавиатуре в пикселях
+  arrowScroll       : 50,
+
+  // Pulse (less tweakable)
+  // ratio of "tail" to "acceleration"
+  pulseAlgorithm   : true,
+  pulseScale       : 4,
+  pulseNormalize   : 1,
+
+  // Поддержка тачпада
+  touchpadSupport   : true,
+})
+
+
   class Menu {
     constructor(menuElement, buttonElement) {
       this.menu = typeof menuElement === "string" ? document.querySelector(menuElement) : menuElement
@@ -195,12 +225,284 @@ if (selectLang.length > 0) {
 })
 
 
+const observer = new IntersectionObserver(entries => {
+  // перебор записей
+  entries.forEach(entry => {
+    // если элемент появился
+    if (entry.isIntersecting) {
+      // добавить ему CSS-класс
+      entry.target.setAttribute('id', 'animBtn');
+    }
+  });
+});
+
+const buttons = document.querySelectorAll('.page-button')
+
+buttons.forEach(e => {
+  observer.observe(e);
+})
 
 
 
+const tl = gsap.timeline();
+
+const arr = document.querySelectorAll('.letterAnim')
+
+arr.forEach(e => {
+  tl.from(e, {opacity: 0, x: -100, duration: 0.1})
+})
+
+
+ScrollTrigger.create({
+  animation: tl,
+  trigger: '.copy-block__wrapper',
+  start: 'top 40%',
+  end: 'top 80%',
+})
+
+const tl2 = gsap.timeline();
+
+tl2.from('#animSlide1', {opacity: 0, y: -300, duration: 1.5})
+
+
+ScrollTrigger.create({
+  animation: tl2,
+  trigger: '.copy-block__sw',
+  start: 'top 35%',
+  end: 'top 10%',
+})
+
+
+const tl3 = gsap.timeline();
+
+tl3.from('#animSlide2', {opacity: 0, y: 300, duration: 1.5})
+
+
+ScrollTrigger.create({
+  animation: tl3,
+  trigger: '.copy-block__sw',
+  start: 'top 35%',
+  end: 'top 10%',
+})
+
+
+const tl4 = gsap.timeline();
+
+tl4.from('#animeCardSlide1', {opacity: 0, x: -200, duration: 1})
+
+
+ScrollTrigger.create({
+  animation: tl4,
+  trigger: '.subscribe__swiper',
+  start: 'top 50%',
+  end: 'top 10%',
+})
+
+
+// const tl5 = gsap.timeline();
+
+// tl5.from('.animateFirstCoin', {x: -100, y: 100})
+
+
+// ScrollTrigger.create({
+//   animation: tl5,
+//   trigger: '.Capabilities__container',
+//   start: "top 70%",
+//   end: "top 30%",
+//   scrub: true,
+// })
+
+const tl5 = gsap.timeline();
+
+tl5.from('#rewievsSlide1', {opacity: 0, x: 200, duration: 1})
+
+
+ScrollTrigger.create({
+  animation: tl5,
+  trigger: '.rewievs__wrapper',
+  start: 'top 50%',
+  end: 'top 10%',
+})
+
+
+const tl6 = gsap.timeline();
+
+tl6.from('#secure1', {y: -200})
 
 
 
+ScrollTrigger.create({
+  animation: tl6,
+  trigger: '.secure__container',
+  start: 'top 50%',
+  end: 'top 10%',
+  scrub: true,
+})
 
+
+
+const tl7 = gsap.timeline();
+
+tl7.from('#secure2', {y: -200})
+
+
+
+ScrollTrigger.create({
+  animation: tl7,
+  trigger: '.secure__container',
+  start: 'top 50%',
+  end: 'top 10%',
+  scrub: true,
+})
+
+
+const tl8 = gsap.timeline();
+
+tl8.from('#secure3', {y: 200})
+
+
+
+ScrollTrigger.create({
+  animation: tl8,
+  trigger: '.secure__container',
+  start: 'top 50%',
+  end: 'top 10%',
+  scrub: true,
+})
+
+
+const tl9 = gsap.timeline();
+
+tl9.from('#secure4', {y: 200})
+
+
+
+ScrollTrigger.create({
+  animation: tl9,
+  trigger: '.secure__container',
+  start: 'top 50%',
+  end: 'top 10%',
+  scrub: true,
+})
+
+
+const tl10 = gsap.timeline();
+
+const arr10 = document.querySelectorAll('.letterSubscribeAnim')
+
+arr10.forEach(e => {
+  tl10.from(e, {opacity: 0, x: -100, duration: 0.1})
+})
+
+
+ScrollTrigger.create({
+  animation: tl10,
+  trigger: '.subscribe__container',
+  start: 'top 40%',
+  end: 'top 80%',
+})
+
+
+const tl11 = gsap.timeline();
+
+const arr11 = document.querySelectorAll('.itsprofitableAnimate')
+
+arr11.forEach(e => {
+  tl11.from(e, {opacity: 0, x: -100, duration: 0.1})
+})
+
+
+ScrollTrigger.create({
+  animation: tl11,
+  trigger: '.itsprofitable__wrapper',
+  start: 'top 40%',
+  end: 'top 80%',
+})
+
+
+const tl12 = gsap.timeline();
+
+const arr12 = document.querySelectorAll('.CapabilitiesAnimate')
+
+arr12.forEach(e => {
+  tl12.from(e, {opacity: 0, x: -100, duration: 0.1})
+})
+
+
+ScrollTrigger.create({
+  animation: tl12,
+  trigger: '.Capabilities__wrapper',
+  start: 'top 40%',
+  end: 'top 80%',
+})
+
+
+const tl13 = gsap.timeline();
+
+const arr13 = document.querySelectorAll('.secureAnimate')
+
+arr13.forEach(e => {
+  tl13.from(e, {opacity: 0, x: -100, duration: 0.1})
+})
+
+
+ScrollTrigger.create({
+  animation: tl13,
+  trigger: '.secure__wrapper',
+  start: 'top 40%',
+  end: 'top 80%',
+})
+
+
+
+const tl14 = gsap.timeline();
+
+const arr14 = document.querySelectorAll('.partnersAnimater')
+
+arr14.forEach(e => {
+  tl14.from(e, {opacity: 0, x: -100, duration: 0.1})
+})
+
+
+ScrollTrigger.create({
+  animation: tl14,
+  trigger: '.partners__wrapper',
+  start: 'top 40%',
+  end: 'top 80%',
+})
+
+
+const tl15 = gsap.timeline();
+
+const arr15 = document.querySelectorAll('.rewievsAnimate')
+
+arr15.forEach(e => {
+  tl15.from(e, {opacity: 0, x: -100, duration: 0.1})
+})
+
+
+ScrollTrigger.create({
+  animation: tl15,
+  trigger: '.rewievs__wrapper',
+  start: 'top 40%',
+  end: 'top 80%',
+})
+
+
+const tl16 = gsap.timeline();
+
+const arr16 = document.querySelectorAll('.helpAnimate')
+
+arr16.forEach(e => {
+  tl16.from(e, {opacity: 0, x: -100, duration: 0.1})
+})
+
+
+ScrollTrigger.create({
+  animation: tl16,
+  trigger: '.help__wrapper',
+  start: 'top 40%',
+  end: 'top 80%',
+})
 
 
