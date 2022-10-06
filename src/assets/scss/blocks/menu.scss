@@ -221,7 +221,7 @@
         bottom: 0%;
     }
   }
-  @include breakpoint($lb-bp) {
+  @include breakpoint($xl-bp) {
     display: block;
     margin-left: 3rem;
   }
