@@ -1,6 +1,7 @@
 
 .main {
 
+
   @keyframes btnAnimation {
     0% { scale: 0.8 }
     70% { scale: 1.1 }
@@ -8,6 +9,14 @@
     90% { scale: 1.05}
     100% { scale: 1}
    }
+
+
+  @include breakpoint($lb-bp) {
+    padding-top: 10rem;
+  }
+  @include breakpoint($sm-bp) {
+    padding-top: 7rem;
+  }
 
   .copy-block {
     display: grid;
@@ -21,6 +30,10 @@
     @include breakpoint($lb-bp) {
       padding-top: 6.5rem;
     }
+    @include breakpoint($sm-bp) {
+      padding-top: 0;
+      padding-bottom: 9rem;
+    }
     div.copy-block__wrapper {
       display: flex;
       flex-direction: column;
@@ -29,6 +42,11 @@
       @include breakpoint($xl-bp) {
         padding-bottom: 10rem;
         gap: 3.5rem;
+      }
+      @include breakpoint($sm-bp) {
+        padding-top: 3rem;
+        gap: 2rem;
+        padding-bottom: 5rem;
       }
       h1.ex76 {
         position: relative;
@@ -54,12 +72,19 @@
         @include breakpoint($lb-bp) {
           padding-bottom: 2.5rem;
         }
+        @include breakpoint($sm-bp) {
+          padding-top: 0.5rem;
+          padding-bottom: 1rem;
+        }
       }
     
       button.page-button {
         padding-left: 5rem;
         padding-right: 5rem;
         margin-right: auto;
+        @include breakpoint($sm-bp) {
+          width: 100%;
+        }
       }
     }
     .copy-block__swiper {
@@ -71,6 +96,9 @@
       .swiper-slide {
         border: 0.1rem solid #AFC7B1;
         padding-top: 2rem;
+        @include breakpoint($sm-bp) {
+          padding-top: 1rem;
+        }
         div.slide-top {
           display: grid;
           grid-template-columns: repeat(3, min-content);
@@ -85,7 +113,10 @@
             flex-direction: column;
             gap: 0.5rem;
           }
-        
+          @include breakpoint($sm-bp) {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+          }
           div.second-block {
         
             div.img-spot {
@@ -114,10 +145,28 @@
           margin-left: 2rem;
           margin-right: 2rem;
           padding-top: 1.5rem;
+          @include breakpoint($sm-bp) {
+            margin-right: 1.5rem;
+            margin-left: 1.5rem;
+            padding-top: 2rem;
+          }
           .block-komm {
             display: flex;
             justify-content: space-between;
             padding-top: 3.8rem;
+            @include breakpoint($sm-bp) {
+              padding-top: 0.8rem;
+              .left-block {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+              }
+              .right-block {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+              }
+            }
             &>div {
               display: flex;
               flex-direction: column;
@@ -138,6 +187,15 @@
               bottom: 2.3rem;
               left: 50%;
               transform: translateX(-50%);
+              @include breakpoint($sm-bp) {
+                bottom: 1rem;
+              }
+              .reg16 {
+                @include breakpoint($sm-bp) {
+                  font-size: 1.4rem;
+                  line-height: 1.6rem;
+                }
+              }
               &:hover {
                 a {
                   animation: 1s linear 0s infinite alternate pulse;
@@ -147,6 +205,9 @@
             .slide-bot__graphik {
               width: 100%;
               height: 24rem;
+              @include breakpoint($sm-bp) {
+                height: 13rem;
+              }
               img {
                 width: 100%;
                 height: 100%;
@@ -161,12 +222,18 @@
     div.swiper-container {
       display: grid;
       grid-template-columns: 1fr 14rem;
+      @include breakpoint($sm-bp) {
+        grid-template-columns: 1fr;
+      }
       button.show-button {
         border: 0;
         background-color: transparent;
         border-radius: 0;
         padding-top: 4.25rem;
         padding-left: 12rem;
+        @include breakpoint($sm-bp) {
+          padding-top: 2rem;
+        }
         &:hover a {
           color: $orange;
         }
@@ -183,6 +250,13 @@
             border-color: $green;
           }
         }
+        @include breakpoint($sm-bp) {
+          padding-left: 0;
+        }
+      }
+      div.arrow-container {
+        grid-row: 1 / 2;
+        padding-top: 1.3rem;
       }
     
       div.swiper-progressbar {
@@ -192,6 +266,10 @@
         height: 0.1rem;
         background-color: $lgreen;
         grid-column: 2 span;
+        @include breakpoint($sm-bp) {
+          grid-column: auto;
+          margin-top: 2.8rem;
+        }
         .swiper-pagination-progressbar-fill {
           height: 0.3rem;
           top: -0.2rem;
@@ -218,6 +296,10 @@
       height: 4rem;
       cursor: pointer;
       transition: transform 0.5s ease;
+      @include breakpoint($sm-bp) {
+        width: 4.2rem;
+        height: 3rem;
+      }
       &::before, 
       &::after {
         content: '';
@@ -227,6 +309,11 @@
         height: 0.2rem;
         background-color: $green;
         width: 1rem;
+        @include breakpoint($sm-bp) {
+          top: 1.35rem;
+          left: 1.8rem;
+          height: 0.1rem;
+        }
       }
       &::before {
         border-left: 0.2rem solid $green;
@@ -237,9 +324,18 @@
         left: 1.5rem;
         background-color: transparent;
         transform: rotate(45deg) translateY(-50%);
+        @include breakpoint($sm-bp) {
+          height: 0.8rem;
+          width: 0.8rem;
+          border-width: 0.1rem;
+          top: 1.3rem;
+        }
       }
       &::after {
         width: 2rem;
+        @include breakpoint($sm-bp) {
+          width: 1rem;
+        }
       }
       &:hover {
         transform: translateX(-1rem);
@@ -273,6 +369,9 @@
         overflow: hidden;
         padding-top: 3rem;
       }
+      @include breakpoint($sm-bp) {
+        padding-bottom: 7rem;
+      }
       h2.ex76 {
         display: flex;
       }
@@ -281,6 +380,9 @@
         padding-top: 6rem;
         @include breakpoint($lb-bp) {
           padding-top: 4rem;
+        }
+        @include breakpoint($sm-bp) {
+          padding-top: 3rem;
         }
         div.subscribe__price-block.br5 {
           border: 0.1rem solid #AFC7B1;
@@ -293,6 +395,9 @@
           
           @include breakpoint($lb-bp) {
             padding: 3.3rem;
+          }
+          @include breakpoint($sm-bp) {
+            padding: 2.3rem;
           }
           div.df {
             display: flex;
@@ -395,6 +500,11 @@
           width: 14rem;
           margin-left: auto;
         }
+        @include breakpoint($sm-bp) {
+          padding-top: 2rem;
+          margin: 0;
+          width: 100%;
+        }
       }
 
       div.subscribe__progressbar {
@@ -407,6 +517,9 @@
         display: none;
         @include breakpoint($lb-bp) {
           display: block;
+        }
+        @include breakpoint($sm-bp) {
+          margin-top: 2.8rem;
         }
         .swiper-pagination-progressbar-fill {
           height: 0.3rem;
@@ -426,6 +539,11 @@
     @include breakpoint($lb-bp) {
       padding-top: 5rem;
     }
+
+    @include breakpoint($sm-bp) {
+      grid-template-columns: 100%;
+      padding-bottom: 7rem;
+    }
   
     div.itsprofitable__wrapper.pl4 {
       h2.ex76 {
@@ -433,6 +551,9 @@
         display: flex;
         @include breakpoint($lb-bp) {
           padding-bottom: 2.5rem;
+        }
+        @include breakpoint($sm-bp) {
+          padding-bottom: 1.5rem;
         }
       }
   
@@ -446,6 +567,9 @@
         }
         @include breakpoint($lb-bp) {
           column-gap: 4rem;
+        }
+        @include breakpoint($sm-bp) {
+          row-gap: 2rem;
         }
         div.itsprofitable__top-item {
           position: relative;
@@ -472,6 +596,10 @@
             width: 10rem;
             height: 21rem;
             z-index: 2;
+            @include breakpoint($sm-bp) {
+              width: 8rem;
+              height: 15rem;
+            }
             img {
               width: 100%;
               height: 100%;
@@ -483,6 +611,11 @@
             @include breakpoint($xl-bp) {
               display: grid;
               grid-template-columns: repeat(3, 1fr);
+            }
+            @include breakpoint($sm-bp) {
+              padding-top: 1rem;
+              display: flex;
+              flex-direction: column;
             }
             li {
               position: relative;
@@ -508,6 +641,9 @@
               }
               &:not(:last-child) {
                 padding-bottom: 2rem;
+                @include breakpoint($sm-bp) {
+                  padding-bottom: 1rem;
+                }
               }
             }
           }
@@ -516,6 +652,9 @@
             width: 100%;
             @include breakpoint($xl-bp) {
               width: 30rem;
+            }
+            @include breakpoint($sm-bp) {
+              width: 100%;
             }
           }
         }
@@ -527,6 +666,9 @@
           }
           @include breakpoint($lb-bp) {
             width: 70%;
+          }
+          @include breakpoint($sm-bp) {
+            width: 100%;
           }
         }
 
@@ -570,6 +712,10 @@
           flex-direction: column;
           row-gap: 5rem;
         }
+        @include breakpoint($sm-bp) {
+          padding-top: 6rem;
+          row-gap: 4rem;
+        }
         div.itsprofitable__bottom-item {
           display: flex;
           flex-direction: column;
@@ -600,9 +746,13 @@
             @include breakpoint($lb-bp) {
               padding-bottom: 4rem;
             }
+            @include breakpoint($sm-bp) {
+              padding-bottom: 2.5rem;
+            }
           }
           div.itsprofitable__bottom-item:nth-child(2) .desc {
             padding-top: 1rem;
+            padding-top: 0.5rem;
           }
         }
         .flags {
@@ -614,6 +764,9 @@
           width: 100%;
           @include breakpoint($xl-bp) {
             height: 3rem;
+          }
+          @include breakpoint($sm-bp) {
+            height: 2rem;
           }
           img {
             position: absolute;
@@ -639,6 +792,9 @@
     @include breakpoint($lb-bp) {
       padding-top: 5rem;
     }
+    @include breakpoint($sm-bp) {
+      padding-bottom: 7rem;
+    }
   
     div.Capabilities__wrapper {
       h2.ex76 {
@@ -646,6 +802,9 @@
         padding-bottom: 6rem;
         @include breakpoint($lb-bp) {
           padding-bottom: 4rem;
+        }
+        @include breakpoint($sm-bp) {
+          padding-bottom: 3rem;
         }
       }
   
@@ -657,6 +816,11 @@
           grid-template-columns: 1fr;
         }
         div.swiper.Capabilities__swiper {
+          @include breakpoint($sm-bp) {
+            width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+          }
           div.swiper-wrapper {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -667,6 +831,12 @@
               grid-template-rows: repeat(2, 26rem) 37rem;
               gap: 2rem;
             }
+            @include breakpoint($sm-bp) {
+              grid-template-columns: auto;
+              grid-template-rows: auto;
+              display: flex;
+              gap: 0;
+            }
             div.swiper-slide.profit__container-item {
               border: 0.1rem solid $lgreen;
               border-radius: 0.5rem;
@@ -676,6 +846,9 @@
               justify-content: center;
               @include breakpoint($xl-bp) {
                 padding: 0 4.2rem;
+              }
+              @include breakpoint($sm-bp) {
+                padding: 4.4rem;
               }
               span.sm26 {
                 padding-top: 1.7rem;
@@ -722,6 +895,9 @@
                 height: 2.2rem;
                 margin-top: auto;
               }
+              @include breakpoint($sm-bp) {
+                display: none;
+              }
             }
           }
         }
@@ -756,6 +932,12 @@
               top: unset;
               z-index: 2;
             }
+            @include breakpoint($sm-bp) {
+              bottom: -19rem;
+              right: 27rem;
+              width: 6rem;
+              height: 6rem;
+            }
           }
           .second-coin {
             width: 15rem;
@@ -771,6 +953,12 @@
               top: unset;
               z-index: 2;
             }
+            @include breakpoint($sm-bp) {
+              bottom: -17.1rem;
+              right: 1rem;
+              width: 5.5rem;
+              height: 5.5rem;
+            }
           }
           .third-coin {
             top: 24.4rem;
@@ -782,6 +970,12 @@
               height: 8rem;
               top: unset;
               z-index: 2;
+            }
+            @include breakpoint($sm-bp) {
+              bottom: -14.5rem;
+              right: 17.5rem;
+              width: 5.5rem;
+              height: 5.5rem;
             }
           }
           .forth-coin {
@@ -798,6 +992,13 @@
               top: unset;
               z-index: 2;
             }
+            @include breakpoint($sm-bp) {
+              bottom: -20.5rem;
+              right: 9.5rem;
+              top: unset;
+              width: 5rem;
+              height: 5rem;
+            }
           }
           .fifth-coin {
             top: 48.5rem;
@@ -809,9 +1010,49 @@
               width: 8rem;
               height: 8rem;
             }
+            @include breakpoint($sm-bp) {
+              bottom: -24rem;
+              right: 17.5rem;
+              top: unset;
+              width: 7rem;
+              height: 7rem;
+            }
           }
   
         }
+      }
+      div.arrow-container {
+        padding-top: 1.5rem;
+        display: none;
+        @include breakpoint($sm-bp) {
+          display: flex;
+        }
+      } 
+      div.capabilities__progressbar {
+        display: none;
+        @include breakpoint($sm-bp) {
+        display: block;
+        position: relative;
+        margin-top: 4.8rem;
+        width: 100%;
+        height: 0.1rem;
+        background-color: $lgreen;
+        grid-column: 2 span;
+        @include breakpoint($sm-bp) {
+          grid-column: auto;
+          margin-top: 2.8rem;
+        }
+        .swiper-pagination-progressbar-fill {
+          height: 0.3rem;
+          top: -0.2rem;
+          border-radius: 0.3rem;
+          background-color: $green;
+        }
+        }
+      }
+      .capabilities__button {
+        margin-top: 18rem;
+        width: 100%;
       }
     }
   }
@@ -822,6 +1063,9 @@
 		// .secure__wrapper
     @include breakpoint($lb-bp) {
       padding-top: 5rem;
+    }
+    @include breakpoint($sm-bp) {
+      padding-bottom: 7rem;
     }
 		&__wrapper {
       .ex76 {
@@ -843,6 +1087,10 @@
         row-gap: 4rem;
         padding-top: 4rem;
       }
+      @include breakpoint($sm-bp) {
+        row-gap: 3rem;
+        padding-top: 2.5rem;
+      }
 		}
 
 		// .secure__container-item
@@ -851,6 +1099,9 @@
       display: grid;
       grid-template-columns: min-content 1fr;
       gap: 3rem;
+      @include breakpoint($sm-bp) {
+        gap: 1.5rem;
+      }
       .secure__icon {
         fill: transparent;
         stroke: $green;
@@ -859,6 +1110,10 @@
         height: 6.6rem;
         &:hover{
           stroke: $orange;
+        }
+        @include breakpoint($sm-bp) {
+          width: 4.4rem;
+          height: 4.4rem;
         }
       }
       .secure__text {
@@ -882,6 +1137,9 @@
           margin-right: 0;
           padding-left: 6rem;
           padding-right: 6rem;
+        }
+        @include breakpoint($sm-bp) {
+          width: 100%;
         }
       }
     }
@@ -911,11 +1169,29 @@ section.partners{
         grid-template-columns: 30rem 1fr;
         column-gap: 7rem;
       }
+      @include breakpoint($sm-bp) {
+        grid-template-columns: 1fr;
+      }
       div.partners__left-block {
         @include breakpoint($xl-bp) {
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
+          flex-direction: column;
+          padding-top: 4rem;
+        }
+        @include breakpoint($sm-bp) {
+          padding-top: 3rem;
+        }
+        .left-block__button {
+          display: none;
+          @include breakpoint($lb-bp) {
+            display: block;
+            width: 100%;
+          }
+          @include breakpoint($sm-bp) {
+            display: none;
+          }
         }
         div.partners__ball {
           width: 52.4rem;
@@ -930,6 +1206,9 @@ section.partners{
             width: 100%;
             height: 30rem
           }
+          @include breakpoint($sm-bp) {
+            height: 33.5rem;
+          }
           svg {
             fill: transparent;
             stroke: $green;
@@ -941,6 +1220,11 @@ section.partners{
 
           span.bold80.green {
             padding-top: 4rem;
+            @include breakpoint($sm-bp) {
+              padding-top: 1rem;
+              font-size: 5rem;
+              line-height: 11.8rem;
+            }
           }
         }
       }
@@ -950,24 +1234,76 @@ section.partners{
         @include breakpoint($xl-bp) {
           padding-top: 3.9rem;
         }
+        @include breakpoint($sm-bp) {
+          padding-top: 2.9rem;
+        }
         ul {
           display: flex;
           flex-direction: column;
           gap: 10rem;
+          @include breakpoint($lb-bp) {
+            gap: 6rem;
+          }
+          @include breakpoint($sm-bp) {
+            gap: 4rem;
+          }
           li {
             position: relative;
             padding-left: 8.5rem;
             @include breakpoint($xl-bp) {
               padding-left: 7rem;
             }
+            @include breakpoint($sm-bp) {
+              padding-left: 3rem;
+            }
+            &:nth-child(1)::after {
+              content: '';
+              bottom: -5rem;
+              left: 1rem;
+              position: absolute;
+              background: linear-gradient(to right, $green, transparent);
+              height: 0.1rem;
+              width: 29rem;
+              @include breakpoint($lb-bp) {
+                bottom: -3rem;
+              }
+              @include breakpoint($sm-bp) {
+                bottom: -2rem;
+              }
+            }
+            &:last-child::after {
+              content: '';
+              top: -5rem;
+              left: 1rem;
+              position: absolute;
+              background: linear-gradient(to right, $green, transparent);
+              height: 0.1rem;
+              width: 29rem;
+              @include breakpoint($lb-bp) {
+                top: -3rem;
+              }
+              @include breakpoint($sm-bp) {
+                top: -2rem;
+              }
+            }
             &::before {
-              content: url('/assets/images/svg/check.svg');
+              content: '';
               position: absolute;
               top: 59%;
               transform: translateY(-50%);
               left: 1rem;
+              background-image: url('/assets/images/svg/check.svg');
+              height:4rem;
+              width:4rem;
+              background-size: 4rem 4rem;
+              background-repeat: no-repeat;
               @include breakpoint($xl-bp) {
                 left: 0;
+              }
+              @include breakpoint($sm-bp) {
+                height: 2rem;
+                width: 2rem;
+                background-size: 2rem 2rem;
               }
             }
           }
@@ -980,10 +1316,21 @@ section.partners{
       display: flex;
       align-items: center;
       justify-content: center;
+      @include breakpoint($sm-bp) {
+        padding-top: 3rem;
+      }
       button.page-button {
         padding-left: 10rem;
         padding-right: 10rem;
         margin-right: 9rem;
+        @include breakpoint($lb-bp) {
+          display: none;
+        }
+        @include breakpoint($sm-bp) {
+          display: block;
+          margin-right: 0;
+          width: 100%;
+        }
         a.bold22 {
 
         }
@@ -995,11 +1342,25 @@ section.partners{
 section.rewievs {
   padding-top: 10rem;
   padding-bottom: 10rem;
-
+  @include breakpoint($lb-bp) {
+    padding-top: 0;
+  }
+  @include breakpoint($sm-bp) {
+    padding-bottom: 7rem;
+  }
   div.rewievs__wrapper {
+    @include breakpoint($sm-bp) {
+      padding-top: 4.5rem;
+    }
     h2.ex76 {
       display: flex;
       padding-bottom: 6rem;
+      @include breakpoint($lb-bp) {
+        padding-bottom: 4rem;
+      }
+      @include breakpoint($sm-bp) {
+        padding-bottom: 3rem;
+      }
     }
 
     div.rewievs__container {
@@ -1019,17 +1380,27 @@ section.rewievs {
             height: auto;
             display: flex;
             flex-direction: column;
+            @include breakpoint($lb-bp) {
+              padding: 1.5rem;
+            }
               div.rewievs__slide-cont {
                 display: flex;
                 gap: 3rem;
                 align-items: center;
                 padding-bottom: 3.6rem;
+                @include breakpoint($lb-bp) {
+                  padding-bottom: 2.6rem;
+                }
                 div.rewievs__avatar {
                   width: 10.5rem;
                   height: 10.5rem;
                   border-radius: 50%;
                   overflow: hidden;
                   filter: grayscale(1);
+                  @include breakpoint($lb-bp) {
+                    width: 6rem;
+                    height: 6rem;
+                  }
                   img {
                     width: 100%;
                     height: 100%;
@@ -1043,7 +1414,9 @@ section.rewievs {
               }
             
               div.rewievs__text {
-            
+                @include breakpoint($lb-bp) {
+                  line-height: 2.3rem;
+                }
               }
             
               div.rewievs__data {
@@ -1064,9 +1437,26 @@ section.rewievs {
       align-items: center;
       justify-items: center;
       padding-top: 4.5rem;
+      @include breakpoint($lb-bp) {
+        padding-top: 3rem;
+        padding-right: 0;
+      }
+      @include breakpoint($sm-bp) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
       button.rewievs-button {
         margin-left: 5rem;
         width: 33.3rem;
+        @include breakpoint($lb-bp) {
+          margin-left: 14rem;
+          width: 30rem;
+        }
+        @include breakpoint($sm-bp) {
+          margin-left: 0;
+          width: 100%;
+          margin-top: 3rem;
+        }
         a.bold22 {
 
         }
@@ -1074,6 +1464,12 @@ section.rewievs {
       .arrow-container {
         gap: 2.5rem;
         padding-top: 0;
+        @include breakpoint($lb-bp) {
+          gap: 2rem;
+        }
+        @include breakpoint($sm-bp) {
+          padding-top: 1.5rem;
+        }
       }
     }
   }
@@ -1084,10 +1480,22 @@ section.help {
   padding-top: 10rem;
   padding-bottom: 10rem;
   background: linear-gradient(180deg, #FFFFFF 0%, #F2F2F2 48.44%, #EEFFE7 90.62%, #FFFFFF 99.48%);
+  @include breakpoint($lb-bp) {
+    padding-top: 5rem;
+  }
+  @include breakpoint($sm-bp) {
+    padding-bottom: 7rem;
+  }
   div.help__wrapper {
     h2.ex76 {
       display: flex;
       padding-bottom: 6rem;
+      @include breakpoint($lb-bp) {
+        padding-bottom: 4rem;
+      }
+      @include breakpoint($sm-bp) {
+        padding-bottom: 3rem;
+      }
     }
 
     .help__button-wp {
@@ -1095,6 +1503,9 @@ section.help {
       display: flex;
       align-items: center;
       justify-content: center;
+      @include breakpoint($lb-bp) {
+        display: none;
+      }
       button {
         padding-left: 5rem;
         padding-right: 5rem;
@@ -1108,6 +1519,12 @@ section.help {
       gap: 14.4rem;
       @include breakpoint($xl-bp) {
         grid-template-columns: 1fr;
+      }
+      @include breakpoint($lb-bp) {
+        gap: 3rem;
+      }
+      @include breakpoint($sm-bp) {
+        gap: 1rem;
       }
       div.left-block {
         button.accordion {
@@ -1146,6 +1563,9 @@ section.help {
         div.panel {
           margin-bottom: 4rem;
           position: relative;
+          @include breakpoint($lb-bp) {
+            margin-bottom: 2.2rem;
+          }
           &:before {
             content: '';
             position: absolute;
@@ -1160,19 +1580,55 @@ section.help {
         }
       }
 
+      .help__button-average {
+        display: none;
+        button {
+          padding-left: 5rem;
+          padding-right: 5rem;
+          @include breakpoint($sm-bp) {
+            width: 100%;
+          }
+        }
+        @include breakpoint($lb-bp) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 4rem;
+
+        }
+      }
+
       div.right-block {
         border: 0.1rem solid $lgreen;
         padding: 3rem 5.4rem;
-
+        @include breakpoint($lb-bp) {
+          padding: 8rem 10rem;
+        }
+        @include breakpoint($sm-bp) {
+          padding: 3rem 1.5rem;
+        }
         div.top-block {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: 3.9rem;
+          @include breakpoint($sm-bp) {
+            grid-template-columns: 1fr;
+          }
+          @include breakpoint($sm-bp) {
+            gap: 1.9rem;
+          }
           div.top-block__title {
             grid-column: 2 span;
             text-align: center;
-            @include breakpoint($xl-bp) {
-              display: none;
+            @include breakpoint($lb-bp) {
+              font-size: 3rem;
+              line-height: 3.5rem;
+            }
+            @include breakpoint($sm-bp) {
+              grid-column: auto;
+              font-size: 2rem;
+              line-height: 2.3rem;
+              text-align: start;
             }
           }
         
@@ -1235,9 +1691,34 @@ section.help {
           align-items: center;
           justify-content: center;
           gap: 4rem;
+          @include breakpoint($lb-bp) {
+            padding-top: 10rem;
+          }
+          @include breakpoint($sm-bp) {
+            padding-top: 4.2rem;
+            gap: 2rem;
+          }
+          .bottom-block__title {
+            @include breakpoint($lb-bp) {
+              font-size: 3rem;
+              line-height: 3.5rem;
+            }
+            @include breakpoint($sm-bp) {
+              font-size: 2rem;
+              line-height: 2.3rem;
+              text-align: start;
+              align-self: flex-start;
+            }
+          }
           .bottom-block__wrapper {
             display: flex;
             gap: 3rem;
+            @include breakpoint($lb-bp) {
+              gap: 2.5rem;
+            }
+            @include breakpoint($sm-bp) {
+              gap: 1.9rem;
+            }
             a {
               width: 4.6rem;
               height: 4.6rem;
@@ -1267,6 +1748,10 @@ section.join{
     display: flex;
     align-items: center;
     justify-content: center;
+    @include breakpoint($lb-bp) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
     form {
       margin-right: 5rem;
       width: min-content;
@@ -1276,6 +1761,13 @@ section.join{
       h3.ex50 {
         padding-bottom: 3.5rem;
         width: max-content;
+        @include breakpoint($lb-bp) {
+          padding-bottom: 2.5rem;
+        }
+        @include breakpoint($sm-bp) {
+          align-self: center;
+          padding-bottom: 1.5rem;
+        }
       }
       padding: 5rem 10rem;
       display: flex;
@@ -1283,6 +1775,13 @@ section.join{
       gap: 1.5rem;
       border: 0.1rem solid #AFC7B1;
       border-radius: 0.5rem;
+      @include breakpoint($lb-bp) {
+        padding: 5rem 7rem;
+      }
+      @include breakpoint($sm-bp) {
+        padding: 1.5rem;
+        width: 100%;
+      }
       .ref {
         display: flex;
         flex-direction: column;
@@ -1290,6 +1789,10 @@ section.join{
         span {
           margin-right: 1.2rem;
           margin-left: 1.2rem;
+          @include breakpoint($sm-bp) {
+            margin-right: 0;
+            margin-left: 0;
+          }
         }
       }
       input {
@@ -1301,6 +1804,20 @@ section.join{
         line-height: 1.9rem;
         margin-left: 1.2rem;
         margin-right: 1.2rem;
+        @include breakpoint($sm-bp) {
+          margin-right: 0;
+          margin-left: 0;
+        }
+        @include breakpoint($sm-bp) {
+          font-size: 1.4rem;
+          line-height: 1.6rem;
+        }
+      }
+      input + label > span.reg16 {
+        @include breakpoint($sm-bp) {
+          font-size: 1.4rem;
+          line-height: 1.6rem;
+        }
       }
 
       span {
@@ -1312,6 +1829,13 @@ section.join{
         padding-bottom: 1.2rem;
         margin-right: 1.2rem;
         margin-left: 1.2rem;
+        @include breakpoint($lb-bp) {
+          padding-top: 0.5rem;
+        }
+        @include breakpoint($sm-bp) {
+          margin: 0;
+          padding-bottom: 0;
+        }
         div.custom-checkbox {
 
         }
@@ -1324,6 +1848,10 @@ section.join{
       button.page-button.bold22 {
         margin-left: 1.2rem;
         margin-right: 1.2rem;
+        @include breakpoint($sm-bp) {
+          width: 100%;
+          margin: 0;
+        }
       }
     }
   }
@@ -1433,6 +1961,9 @@ input[required]:not([type="checkbox"]) + label {
   transform: translateY(-50%);
   // top: 1rem;
   // left: -16.6rem; /* the negative of the input width */
+  @include breakpoint($sm-bp) {
+    left: 2rem;
+  }
 }
 
 input[required]:not([type="checkbox"]) + label:after {
@@ -1444,6 +1975,10 @@ input[required]:not([type="checkbox"]) + label:after {
 /* show the placeholder when input has no content (no content = invalid) */
 input[required]:invalid:not([type="checkbox"]) + label {
   display: inline-block;
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
 }
 
 /* hide the placeholder when input has some text typed in */
@@ -1516,6 +2051,10 @@ input::-moz-placeholder { color: $black; }
   font-size: 2.6rem;
   line-height: 3.1rem;
   color: $black;
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
 }
 .bold14 {
   font-weight: 700;
@@ -1544,6 +2083,10 @@ input::-moz-placeholder { color: $black; }
   font-weight: 700;
   font-size: 3rem;
   line-height: 3.5rem;
+  @include breakpoint($lb-bp) {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
 }
 
 .bold40 {
@@ -1553,6 +2096,10 @@ input::-moz-placeholder { color: $black; }
   @include breakpoint($lb-bp) {
     font-size: 3rem;
     line-height: 3.5rem;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: 2.1rem;
+    line-height: 2.3rem;
   }
 }
 
@@ -1592,6 +2139,10 @@ input::-moz-placeholder { color: $black; }
   font-weight: 800;
   font-size: 5rem;
   line-height: 5.9rem;
+  @include breakpoint($sm-bp) {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
 }
 .ex150 {
   font-weight: 800;
@@ -1600,6 +2151,10 @@ input::-moz-placeholder { color: $black; }
   @include breakpoint($xl-bp) {
     font-size: 10rem;
     line-height: 12rem;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: 7rem;
+    line-height: 8.2rem;
   }
 }
 .ex76 {
@@ -1610,6 +2165,10 @@ input::-moz-placeholder { color: $black; }
     font-size: 5rem;
     line-height: 6rem;
   }
+  @include breakpoint($sm-bp) {
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
 }
 
 .reg26 {
@@ -1619,6 +2178,10 @@ input::-moz-placeholder { color: $black; }
   @include breakpoint($xl-bp) {
     font-size: 2rem;
     line-height: 2.6rem;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
   }
 }
 
