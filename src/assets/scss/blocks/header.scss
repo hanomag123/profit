@@ -87,6 +87,18 @@
         opacity:1;
       }
     }
+  
+    @keyframes btnAnimation {
+      0% { scale: 0.8 }
+      70% { scale: 1.1 }
+      80% { scale: 0.9}
+      90% { scale: 1.05}
+      100% { scale: 1}
+     }
+
+  #animBtn {
+    animation: btnAnimation 0.3s ease-in-out;
+  }
 }
 
 .arrow {
