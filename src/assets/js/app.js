@@ -125,6 +125,44 @@ const swiper2 = new Swiper(".subscribe__swiper", {
   }
 });
 
+const mm = window.matchMedia('(max-width: 375px)');
+let swiper3 
+mm.addEventListener('change', () => {
+  if (mm.matches) {
+    swiper3 = new Swiper(".Capabilities__swiper", {
+  spaceBetween: 20,
+  navigation: {
+      prevEl: ".capabilities__next",
+      nextEl: ".capabilities__prev",
+  },
+  pagination: {
+    type: 'progressbar',
+    el: '.capabilities__progressbar'
+  },
+});
+  } else {
+    swiper3.destroy()
+  }
+})
+
+if (mm.matches) {
+  swiper3 = new Swiper(".Capabilities__swiper", {
+    spaceBetween: 20,
+    navigation: {
+        prevEl: ".capabilities__next",
+        nextEl: ".capabilities__prev",
+    },
+    pagination: {
+      type: 'progressbar',
+      el: '.capabilities__progressbar'
+    },
+  });
+} else {
+  swiper3.destroy()
+}
+
+
+
 const swiper4 = new Swiper(".rewievs__swiper", {
   slidesPerView: 1,
   spaceBetween: 0,

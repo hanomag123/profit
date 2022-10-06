@@ -6,6 +6,12 @@
     z-index: 10;
     @include breakpoint($lb-bp) {
       padding-top: 3.45rem;
+      // position: fixed;
+      // width: 100%;
+      // background-color: #F1FFEA;
+    }
+    @include breakpoint($sm-bp) {
+      padding-top: 2rem;
     }
     div.header__wrapper {
       width: 24.2rem;
@@ -18,6 +24,22 @@
         width: 28.2rem;
         grid-template-columns: 5rem 14.2rem 4rem;
       }
+      @include breakpoint($sm-bp) {
+        grid-template-columns: 3.6rem min-content 2.8rem;
+        width: auto;
+      }
+      .header__button {
+        @include breakpoint($sm-bp) {
+          background-color: transparent;
+          border: none;
+          padding-left: 0.1rem;
+          padding-right: 1rem;
+
+          a {
+            color: $green;
+          }
+        }
+      }
       div.select-button {
         position: relative;
         &::before {
@@ -27,6 +49,10 @@
           position: absolute;
           top: 1rem;
           right: 1.5rem;
+          @include breakpoint($sm-bp) {
+            right: 0.2rem;
+            top: 0.7rem;
+          }
         }
       }
       div.select-button:focus + .select-lang {
@@ -83,5 +109,9 @@
   svg {
     width: 13.6rem;
     height: 6.2rem;
+    @include breakpoint($sm-bp) {
+      width: 9rem;
+      height: 5rem;
+    }
   }
 }
