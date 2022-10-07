@@ -171,7 +171,7 @@ mm.addEventListener('change', () => {
   },
 });
   } else {
-    swiper3.destroy()
+    swiper3?.destroy()
   }
 })
 
@@ -188,7 +188,7 @@ if (mm.matches) {
     },
   });
 } else {
-  swiper3.destroy()
+  swiper3?.destroy()
 }
 
 
