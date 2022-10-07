@@ -31,6 +31,9 @@
       border-radius: 50%;
       background-color: $lgreen;
     }
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
   }
 
   .page-login {
