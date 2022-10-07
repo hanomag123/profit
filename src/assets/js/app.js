@@ -360,6 +360,17 @@ const getChart = (arr1, arr2) => {
   
     // Configuration options go here
     options: {
+      // onHover: function(evt) {
+      //   // var item = myLineChart.getElementAtEvent(evt);
+      //   // console.log(this.getElementAtEvent(evt))
+      //   if (this.getElementAtEvent(evt).length > 0) {
+      //     console.log(this.getElementAtEvent(evt))
+      //   }
+      //   // if (item.length) {
+      //   //   console.log("onHover",item, evt.type);
+      //   //   console.log(">data", item[0]._index, data.datasets[0].data[item[0]._index]);
+      //   // }
+      // },
       tooltips: {
         
         backgroundColor: "#fff",
@@ -1077,6 +1088,6 @@ ScrollTrigger.create({
   trigger: '#bigTextAnimation1',
   start: 'top 60%',
   end: 'top 20%',
-  markers: true,
+  // markers: true,
 })
 
