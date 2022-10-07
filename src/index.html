@@ -16,7 +16,7 @@
       <button type="reset" class="close-button"></button>
       <div class="page-login__title-container">
         <span class="page-login__title">Войти</span>
-        <div class="page-login__text">У вас еще нет аккаунта? <a class="sign-in__button green" href="#">Зарегистрироваться</a></div>
+        <div class="page-login__text">У вас еще нет аккаунта? <button type="button" class="sign-in__button green login-button">Зарегистрироваться</button></div>
       </div>
       <div class="page-login__wrapper">
         <input type="text" placeholder="Логин" name="login">
@@ -29,38 +29,40 @@
 
   <div class="page-login login-form">
     <div class="page-login__overlay"></div>
-    <form>
+    <form class="login-form__main">
       <button type="reset" class="close-button"></button>
-      <div class="page-login__title-container">
+      <div class="page-login__title-container login-form__title-container">
         <span class="page-login__title">Зарегистрироваться</span>
-        <div class="page-login__text">У вас уже есть аккаунт?<a class="sign-in__button green" href="#">Войти</a></div>
+        <div class="page-login__text">У вас уже есть аккаунт?<button type="button" class="sign-in__button green come-button">Войти</button></div>
       </div>
-      <div class="ref">
-        <input type="text" name="referalCode" placeholder="Реферальный код">
-        <span class="med14">Попросите реферальный код у того, кто рекомендовал сервис</span>
+      <div class="page-login__wrapper">
+        <div class="ref">
+          <input type="text" name="referalCode" placeholder="Реферальный код">
+          <span class="med14">Попросите реферальный код у того, кто рекомендовал сервис</span>
+        </div>
+        <div class="input-wrapper">
+          <input type="text" name="name" id='name2' required>
+          <label for="name2"><span class="reg16">Имя пользователя</span></label>
+        </div>
+        <div class="input-wrapper">
+          <input type="email" name="email" required id="email2">
+          <label for="email2"><span class="reg16">E-mail</span></label>
+        </div>
+        <div class="input-wrapper">
+          <input type="password" name="password" id="password2" required>
+          <label for="password2"><span class="reg16">Пароль</span></label>
+        </div>
+        <div class="input-wrapper">
+          <input type="password" name="secondPassword" required id="secondPassword2">
+          <label for="secondPassword2"><span class="reg16">Подтверждение пароля</span></label>
+        </div>
+        <input type="text" name="telegram" placeholder="Телеграмм">
       </div>
-      <div class="input-wrapper">
-        <input type="text" name="name" id='name' required>
-        <label for="name"><span class="reg16">Имя пользователя</span></label>
-      </div>
-      <div class="input-wrapper">
-        <input type="email" name="email" required id="email">
-        <label for="email"><span class="reg16">E-mail</span></label>
-      </div>
-      <div class="input-wrapper">
-        <input type="password" name="password" id="password" required>
-        <label for="password"><span class="reg16">Пароль</span></label>
-      </div>
-      <div class="input-wrapper">
-        <input type="password" name="secondPassword" required id="secondPassword">
-        <label for="secondPassword"><span class="reg16">Подтверждение пароля</span></label>
-      </div>
-      <input type="text" name="telegram" placeholder="Телеграмм">
       <div class="checkbox-wrapper">
-          <input type="checkbox" id="box-2" required name="confirm">
-          <label for="box-2">Согласен с условиями пользовательского соглашения</label>
+          <input type="checkbox" id="box-22" required name="confirm">
+          <label for="box-22">Согласен с условиями пользовательского соглашения</label>
       </div>
-      <button type="submit" class="page-button bold22">Зарегистрироваться</button>
+      <button type="submit" class="page-login__button page-button bold22">Зарегистрироваться</button>
     </form>
     <!-- <form action="">
       
@@ -160,7 +162,8 @@
                   <a href="#" class="bold22 green">Копировать</a>
                 </div>
                 <div class="slide-bot__graphik">
-                  <img src="./assets/images/copy/grafic.png" alt="">
+                  <!-- <img src="./assets/images/copy/grafic.png" alt=""> -->
+                  <canvas id="myChart" style="width:100%; height: 100%;"></canvas>
                 </div>
               </div>
             </div>
@@ -202,6 +205,7 @@
                 </div>
                 <div class="slide-bot__graphik">
                   <img src="./assets/images/copy/grafic-1.png" alt="">
+                  <!-- <canvas id="myChart1" style="width:100%; height: 100%;"></canvas> -->
                 </div>
               </div>
             </div>
@@ -243,6 +247,7 @@
                 </div>
                 <div class="slide-bot__graphik">
                   <img src="./assets/images/copy/grafic.png" alt="">
+                  <!-- <canvas id="myChart2" style="width:100%; height: 100%;"></canvas> -->
                 </div>
               </div>
             </div>

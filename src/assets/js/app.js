@@ -258,6 +258,10 @@ if (comeForm && comeButtons.length > 0) {
       document.body.style.setProperty('overflow', 'hidden')
       const overlay = comeForm.querySelector('.page-login__overlay')
       const closeButton = comeForm.querySelector('.close-button')
+      const resetButton = comeForm.querySelector('button[type="button"]')
+      resetButton.addEventListener('click', () => {
+        comeForm.classList.remove('page-login--active')
+      })
       closeButton.addEventListener('click', () => {
         comeForm.classList.remove('page-login--active')
         document.body.style.removeProperty('overflow')
@@ -280,10 +284,15 @@ if (loginForm && loginbutton.length > 0) {
       document.body.style.setProperty('overflow', 'hidden')
       const overlay = loginForm.querySelector('.page-login__overlay')
       const closeButton = loginForm.querySelector('.close-button')
+      const resetButton = loginForm.querySelector('button[type="button"]')
+      resetButton.addEventListener('click', () => {
+        loginForm.classList.remove('page-login--active')
+      })
       closeButton.addEventListener('click', () => {
         loginForm.classList.remove('page-login--active')
         document.body.style.removeProperty('overflow')
       })
+
       overlay.addEventListener('click', () => {
         loginForm.classList.remove('page-login--active')
         document.body.style.removeProperty('overflow')
@@ -291,6 +300,127 @@ if (loginForm && loginbutton.length > 0) {
     })
   })
 }
+
+let ctx = document.getElementById("myChart").getContext("2d");
+
+var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+gradientStroke.addColorStop(0, "#0CC61F");
+gradientStroke.addColorStop(1, "#0CC61F");
+
+var gradientBkgrd = ctx.createLinearGradient(0, 100, 0, 400);
+gradientBkgrd.addColorStop(0, "RGBA(12,198,31,0.39)");
+gradientBkgrd.addColorStop(1, "rgba(249,135,94,0)");
+
+let draw = Chart.controllers.line.prototype.draw;
+Chart.controllers.line = Chart.controllers.line.extend({
+  draw: function() {
+    draw.apply(this, arguments);
+    let ctx = this.chart.chart.ctx;
+    let _stroke = ctx.stroke;
+    ctx.stroke = function() {
+      ctx.save();
+      ctx.shadowColor = 'RGBA(12,198,31,0.9)';
+      ctx.shadowBlur = 20;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
+      _stroke.apply(this, arguments);
+      ctx.restore();
+    };
+  }
+});
+
+const getChart = (arr1, arr2) => {
+  return {
+    // The type of chart we want to create
+    type: "line",
+  
+    // The data for our dataset
+    data: {
+      labels: arr1,
+      datasets: [
+        {
+          label: "Income",
+          backgroundColor: gradientBkgrd,
+          borderColor: gradientStroke,
+          data: arr2,
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointBackgroundColor: "rgba(255,255,255,0)",
+          pointBorderWidth: 0,
+          pointHoverRadius: 8,
+          pointHoverBackgroundColor: gradientStroke,
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointHoverBorderWidth: 4,
+          pointRadius: 1,
+          borderWidth: 5,
+          pointHitRadius: 16,
+          lineTension: 0,
+        }
+      ]
+    },
+  
+    // Configuration options go here
+    options: {
+      tooltips: {
+        
+        backgroundColor: "#fff",
+        displayColors: false,
+        titleFontColor: "#000",
+        bodyFontColor: "#000"
+      },
+      legend: {
+        display: false
+      },
+      layout: {
+        padding: {
+          left: -10,
+          bottom: -10,
+        }
+      },
+      scales: {
+        xAxes: [
+          {
+            gridLines: {
+              display: false
+            },
+            ticks: {
+              display: false
+          }
+          }
+        ],
+        yAxes: [
+          {
+            gridLines: {
+              display: false
+            },
+            ticks: {
+              display: false
+          }
+          }
+        ]
+      }
+    }
+  }
+}
+
+
+const options = getChart([0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100], [50,50, 60, 60, 60 ,40, 40, 55, 55, 70, 60])
+
+var chart = new Chart(ctx, options);
+
+// document.onclick = () => {
+//   console.log(chart)
+//   chart.ctx.stroke = function() {
+//     ctx.save();
+//     ctx.shadowColor = '#FFFFF';
+//     ctx.shadowBlur = 20;
+//     ctx.shadowOffsetX = 0;
+//     ctx.shadowOffsetY = 0;
+//     chart.ctx.stroke.apply(this, arguments);
+//     ctx.restore();
+//   };
+//     chart.update();
+// }
+
 
 const selectLang = document.querySelectorAll('.select-lang a')
 if (selectLang.length > 0) {
