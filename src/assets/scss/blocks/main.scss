@@ -112,6 +112,9 @@
         position: relative;
         display: flex;
         flex-wrap: wrap;
+        span {
+          display: flex;
+        }
         &::after {
           content: '';
           position: absolute;
@@ -616,6 +619,10 @@
       h2.ex76 {
         padding-bottom: 5.5rem;
         display: flex;
+
+        span {
+          display: flex;
+        }
         @include breakpoint($lb-bp) {
           padding-bottom: 2.5rem;
         }
