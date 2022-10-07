@@ -23,14 +23,34 @@
     flex-direction: column;
     gap: 4rem;
     position: fixed;
-    bottom: 20rem;
+    bottom: 25%;
     left: 9rem;
     a {
-      width: 0.9rem;
-      height: 0.9rem;
+      width: 2rem;
+      height: 2rem;
+      // border: 0.2rem solid #00860B;
       border-radius: 50%;
-      background-color: $lgreen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+        width: 60%;
+        height: 60%;
+        background: rgba(53, 163, 62, 0.5);;
+        border-radius: 50%;
+      }
     }
+
+    // a:before {
+    //   content: '';
+    //   position: absolute;
+    //   width: 2rem;
+    //   height: 2rem;
+    //   border: 0.2rem solid green;
+    //   border-radius: 50%;
+    //   left: -61%;
+    //   top: -52%;
+    // }
     @include breakpoint($xl-bp) {
       display: none;
     }
