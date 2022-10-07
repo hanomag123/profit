@@ -461,7 +461,7 @@ const tl = gsap.timeline();
 const arr = document.querySelectorAll('.letterAnim')
 
 arr.forEach(e => {
-  tl.from(e, {opacity: 0, x: -100, duration: 0.1})
+  tl.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
 })
 
 
@@ -603,7 +603,7 @@ const tl10 = gsap.timeline();
 const arr10 = document.querySelectorAll('.letterSubscribeAnim')
 
 arr10.forEach(e => {
-  tl10.from(e, {opacity: 0, x: -100, duration: 0.1})
+  tl10.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
 })
 
 
@@ -620,7 +620,7 @@ const tl11 = gsap.timeline();
 const arr11 = document.querySelectorAll('.itsprofitableAnimate')
 
 arr11.forEach(e => {
-  tl11.from(e, {opacity: 0, x: -100, duration: 0.1})
+  tl11.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
 })
 
 
@@ -637,7 +637,7 @@ const tl12 = gsap.timeline();
 const arr12 = document.querySelectorAll('.CapabilitiesAnimate')
 
 arr12.forEach(e => {
-  tl12.from(e, {opacity: 0, x: -100, duration: 0.1})
+  tl12.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
 })
 
 
@@ -654,7 +654,7 @@ const tl13 = gsap.timeline();
 const arr13 = document.querySelectorAll('.secureAnimate')
 
 arr13.forEach(e => {
-  tl13.from(e, {opacity: 0, x: -100, duration: 0.1})
+  tl13.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
 })
 
 
@@ -672,7 +672,7 @@ const tl14 = gsap.timeline();
 const arr14 = document.querySelectorAll('.partnersAnimater')
 
 arr14.forEach(e => {
-  tl14.from(e, {opacity: 0, x: -100, duration: 0.1})
+  tl14.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
 })
 
 
@@ -689,7 +689,7 @@ const tl15 = gsap.timeline();
 const arr15 = document.querySelectorAll('.rewievsAnimate')
 
 arr15.forEach(e => {
-  tl15.from(e, {opacity: 0, x: -100, duration: 0.1})
+  tl15.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
 })
 
 
@@ -706,7 +706,7 @@ const tl16 = gsap.timeline();
 const arr16 = document.querySelectorAll('.helpAnimate')
 
 arr16.forEach(e => {
-  tl16.from(e, {opacity: 0, x: -100, duration: 0.1})
+  tl16.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
 })
 
 
@@ -998,7 +998,7 @@ const tl26 = gsap.timeline();
 const arr26 = document.querySelectorAll('.bigTextAnimation1Span')
 
 arr26.forEach(e => {
-  tl26.from(e, {opacity: 0, x: -100, duration: 0.1})
+  tl26.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
 })
 
 
@@ -1033,7 +1033,7 @@ const tl28 = gsap.timeline();
 const arr28 = document.querySelectorAll('.bigTextAnimation2Span')
 
 arr28.forEach(e => {
-  tl28.from(e, {opacity: 0, x: -100, duration: 0.1})
+  tl28.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
 })
 
 
@@ -1050,7 +1050,7 @@ const tl29 = gsap.timeline();
 const arr29 = document.querySelectorAll('.bigTextAnimation3Span')
 
 arr29.forEach(e => {
-  tl29.from(e, {opacity: 0, x: -100, duration: 0.1})
+  tl29.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
 })
 
 
@@ -1068,7 +1068,7 @@ const tl30 = gsap.timeline();
 const arr30 = document.querySelectorAll('.bigTextAnimation1Span')
 
 arr30.forEach(e => {
-  tl30.from(e, {opacity: 0, x: -100, duration: 0.1})
+  tl30.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
 })
 
 
@@ -1077,6 +1077,51 @@ ScrollTrigger.create({
   trigger: '#bigTextAnimation1',
   start: 'top 60%',
   end: 'top 20%',
-  markers: true,
+  // markers: true,
 })
 
+
+
+const tl31 = gsap.timeline();
+
+const arr31 = document.querySelectorAll('.profit__container-item')
+
+arr31.forEach(e => {
+  tl31.to(e, {rotationY:'180_short'})
+})
+
+
+ScrollTrigger.create({
+  animation: tl31,
+  trigger: '.Capabilities',
+  start: 'top 60%',
+  end: 'top 20%',
+  // markers: true,
+})
+
+
+
+const tl32 = gsap.timeline();
+
+tl32.to('.rightBlockContainer', {rotationY:'180_short'})
+
+ScrollTrigger.create({
+  animation: tl32,
+  trigger: '.help',
+  start: 'top 60%',
+  end: 'top 20%',
+  // markers: true,
+})
+
+
+// const tl33 = gsap.timeline();
+
+// tl33.to('.formContainer', {rotationY:'180_short'})
+
+// ScrollTrigger.create({
+//   animation: tl33,
+//   trigger: '.help',
+//   start: 'top 60%',
+//   end: 'top 20%',
+//   // markers: true,
+// })

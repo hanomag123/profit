@@ -1073,18 +1073,56 @@
               gap: 0;
             }
             div.swiper-slide.profit__container-item {
-              border: 0.1rem solid $lgreen;
-              border-radius: 0.5rem;
-              padding: 0 6rem;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              @include breakpoint($xl-bp) {
-                padding: 0 4.2rem;
+              position: relative;
+              width: 100%;
+              height: 100%;
+              transition: transform 0.5s;
+              transform-style: preserve-3d;
+
+              // animation: flipAnim 3s ease-in-out;
+              
+              .hiddenText {
+                // display: none;
+                // height: 100%;
+                border: 0.1rem solid $lgreen;
+                border-radius: 0.5rem;
+                padding: 0 6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                @include breakpoint($xl-bp) {
+                  padding: 0 4.2rem;
+                }
+                @include breakpoint($sm-bp) {
+                  padding: 4.4rem;
+                }
               }
-              @include breakpoint($sm-bp) {
-                padding: 4.4rem;
+
+              .showText {
+                border: 0.1rem solid $lgreen;
+                height: 100%;
+                border-radius: 0.5rem;
+                padding: 0 6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
+                @include breakpoint($xl-bp) {
+                  padding: 0 4.2rem;
+                }
+                @include breakpoint($sm-bp) {
+                  padding: 4.4rem;
+                }
               }
+              
               span.sm26 {
                 padding-top: 1.7rem;
                 position: relative;
@@ -1837,7 +1875,28 @@ section.help {
         }
       }
 
+      .rightBlockContainer {
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .rightHiddenBlock {
+        border: 0.1rem solid #AFC7B1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+
       div.right-block {
+        transform: rotateY(180deg);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
         border: 0.1rem solid $lgreen;
         padding: 3rem 5.4rem;
         @include breakpoint($lb-bp) {
@@ -2094,7 +2153,36 @@ section.join{
       padding-top: 5rem;
       padding-bottom: 5rem;
     }
+
+    // .formContainer {
+    //   position: relative;
+    //   width: 100%;
+    //   height: 100%;
+    //   transition: transform 0.5s;
+    //   transform-style: preserve-3d;
+    //   display: flex;
+    //   justify-content: center;
+    // }
+
+
+    // .hiddenForm {
+    //   border: 0.1rem solid #AFC7B1;
+    //   border-radius: 0.5rem;
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   backface-visibility: hidden;
+    // }
+
+
+
+
     form {
+      // position: absolute;
+      // width: 100%;
+      // height: 100%;
+      // backface-visibility: hidden;
+      // transform: rotateY(180deg);
       margin-right: 5rem;
       width: min-content;
       @include breakpoint($xl-bp) {

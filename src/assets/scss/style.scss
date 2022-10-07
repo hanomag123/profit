@@ -196,7 +196,7 @@ animation: btnAnimation 0.5s ease-in-out;
 }
 
 #coin1 {
-  animation: coinAnimation1 3s ease-in-out infinite;
+  animation: coinAnimation1 10s ease-in-out infinite;
 }
 
 
@@ -222,7 +222,7 @@ animation: btnAnimation 0.5s ease-in-out;
 }
 
 #coin2 {
-  animation: coinAnimation2 3s ease-in-out infinite;
+  animation: coinAnimation2 10s ease-in-out infinite;
 }
 
 
@@ -247,7 +247,7 @@ animation: btnAnimation 0.5s ease-in-out;
 }
 
 #coin3 {
-  animation: coinAnimation3 3s ease-in-out infinite;
+  animation: coinAnimation3 10s ease-in-out infinite;
 }
 
 @keyframes coinAnimation4 {
@@ -271,7 +271,7 @@ animation: btnAnimation 0.5s ease-in-out;
 }
 
 #coin4 {
-  animation: coinAnimation4 3s ease-in-out infinite;
+  animation: coinAnimation4 10s ease-in-out infinite;
 }
 
 @keyframes coinAnimation5 {
@@ -295,7 +295,7 @@ animation: btnAnimation 0.5s ease-in-out;
 }
 
 #coin5 {
-  animation: coinAnimation5 3s ease-in-out infinite;
+  animation: coinAnimation5 10s ease-in-out infinite;
 }
 
 
@@ -321,7 +321,7 @@ animation: btnAnimation 0.5s ease-in-out;
 
 
 #endCoin1 {
-  animation: endCoinAnimation1 3s ease-in-out infinite;
+  animation: endCoinAnimation1 10s ease-in-out infinite;
 }
 
 
@@ -347,7 +347,7 @@ animation: btnAnimation 0.5s ease-in-out;
 
 
 #endCoin2 {
-  animation: endCoinAnimation2 3s ease-in-out infinite;
+  animation: endCoinAnimation2 10s ease-in-out infinite;
 }
 
 
@@ -374,7 +374,7 @@ animation: btnAnimation 0.5s ease-in-out;
 
 
 #endCoin3 {
-  animation: endCoinAnimation3 3s ease-in-out infinite;
+  animation: endCoinAnimation3 10s ease-in-out infinite;
 }
 
 
@@ -400,7 +400,7 @@ animation: btnAnimation 0.5s ease-in-out;
 }
 
 #endCoin4 {
-  animation: endCoinAnimation4 3s ease-in-out infinite;
+  animation: endCoinAnimation4 10s ease-in-out infinite;
 }
 
 
@@ -426,5 +426,17 @@ animation: btnAnimation 0.5s ease-in-out;
 
 
 #endCoin5 {
-  animation: endCoinAnimation5 3s ease-in-out infinite;
+  animation: endCoinAnimation5 10s ease-in-out infinite;
 }
+
+
+
+// @keyframes flipAnim {
+//   0% { 
+//     transform: rotateY(0deg)
+//     }
+
+//   100% {
+//     transform: rotateY(180deg)
+//   }
+// }
