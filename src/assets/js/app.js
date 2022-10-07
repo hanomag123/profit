@@ -680,48 +680,55 @@ ScrollTrigger.create({
 
 
 
-const tl20 = gsap.timeline();
+// const tl20 = gsap.timeline();
 
-tl20.to('#subscribeDot', {backgroundColor: '#afc7b1'})
-tl20.to('#subscribeDotLink', {border: 'unset'})
-tl20.to('#profitDot', {backgroundColor: '#afc7b1'})
-tl20.to('#profitDotLink', {border: 'unset'})
-tl20.to('#capabilitiesDot', {backgroundColor: '#afc7b1'})
-tl20.to('#capabilitiesDotLink', {border: 'unset'})
-tl20.to('#secureDot', {backgroundColor: '#00860B'})
-tl20.to('#secureDotLink', {border: '0.2rem solid #00860B'})
-tl20.to('#partnersDot', {backgroundColor: '#afc7b1'})
-tl20.to('#partnersDotLink', {border: 'unset'})
-tl20.to('#rewievsDot', {backgroundColor: '#afc7b1'})
-tl20.to('#rewievsDotLink', {border: 'unset'})
-tl20.to('#helpDot', {backgroundColor: '#afc7b1'})
-tl20.to('#helpDotLink', {border: 'unset'})
-tl20.to('#joinDot', {backgroundColor: '#afc7b1'})
-tl20.to('#joinDotLink', {border: 'unset'})
+// tl20.to('#subscribeDot', {backgroundColor: '#afc7b1'})
+// tl20.to('#subscribeDotLink', {border: 'unset'})
+// tl20.to('#profitDot', {backgroundColor: '#afc7b1'})
+// tl20.to('#profitDotLink', {border: 'unset'})
+// tl20.to('#capabilitiesDot', {backgroundColor: '#afc7b1'})
+// tl20.to('#capabilitiesDotLink', {border: 'unset'})
+// tl20.to('#secureDot', {backgroundColor: '#00860B'})
+// tl20.to('#secureDotLink', {border: '0.2rem solid #00860B'})
+// tl20.to('#partnersDot', {backgroundColor: '#afc7b1'})
+// tl20.to('#partnersDotLink', {border: 'unset'})
+// tl20.to('#rewievsDot', {backgroundColor: '#afc7b1'})
+// tl20.to('#rewievsDotLink', {border: 'unset'})
+// tl20.to('#helpDot', {backgroundColor: '#afc7b1'})
+// tl20.to('#helpDotLink', {border: 'unset'})
+// tl20.to('#joinDot', {backgroundColor: '#afc7b1'})
+// tl20.to('#joinDotLink', {border: 'unset'})
 
 
 
-ScrollTrigger.create({
-  animation: tl20,
-  trigger: '.Capabilities',
-  start: 'top 20%',
-  end: 'top 0%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl20,
+//   trigger: '.Capabilities',
+//   start: 'top 20%',
+//   end: 'top 0%',
+//   scrub: true,
+// })
 
 
 
 const tl21 = gsap.timeline();
 
 tl21.to('#subscribeDot', {backgroundColor: '#afc7b1'})
+tl21.to('#subscribeDotLink', {border: 'unset'})
 tl21.to('#profitDot', {backgroundColor: '#afc7b1'})
+tl21.to('#profitDotLink', {border: 'unset'})
 tl21.to('#capabilitiesDot', {backgroundColor: '#afc7b1'})
+tl21.to('#capabilitiesDotLink', {border: 'unset'})
 tl21.to('#secureDot', {backgroundColor: '#00860B'})
+tl21.to('#secureDotLink', {border: '0.2rem solid #00860B'})
 tl21.to('#partnersDot', {backgroundColor: '#afc7b1'})
+tl21.to('#partnersDotLink', {border: 'unset'})
 tl21.to('#rewievsDot', {backgroundColor: '#afc7b1'})
+tl21.to('#rewievsDotLink', {border: 'unset'})
 tl21.to('#helpDot', {backgroundColor: '#afc7b1'})
+tl21.to('#helpDotLink', {border: 'unset'})
 tl21.to('#joinDot', {backgroundColor: '#afc7b1'})
-
+tl21.to('#joinDotLink', {border: 'unset'})
 
 
 ScrollTrigger.create({
@@ -737,13 +744,21 @@ ScrollTrigger.create({
 const tl22 = gsap.timeline();
 
 tl22.to('#subscribeDot', {backgroundColor: '#afc7b1'})
+tl22.to('#subscribeDotLink', {border: 'unset'})
 tl22.to('#profitDot', {backgroundColor: '#afc7b1'})
+tl22.to('#profitDotLink', {border: 'unset'})
 tl22.to('#capabilitiesDot', {backgroundColor: '#afc7b1'})
+tl22.to('#capabilitiesDotLink', {border: 'unset'})
 tl22.to('#secureDot', {backgroundColor: '#afc7b1'})
+tl22.to('#secureDotLink', {border: 'unset'})
 tl22.to('#partnersDot', {backgroundColor: '#00860B'})
+tl22.to('#partnersDotLink', {border: '0.2rem solid #00860B'})
 tl22.to('#rewievsDot', {backgroundColor: '#afc7b1'})
+tl22.to('#rewievsDotLink', {border: 'unset'})
 tl22.to('#helpDot', {backgroundColor: '#afc7b1'})
+tl22.to('#helpDotLink', {border: 'unset'})
 tl22.to('#joinDot', {backgroundColor: '#afc7b1'})
+tl22.to('#joinDotLink', {border: 'unset'})
 
 
 
@@ -759,13 +774,21 @@ ScrollTrigger.create({
 const tl23 = gsap.timeline();
 
 tl23.to('#subscribeDot', {backgroundColor: '#afc7b1'})
+tl23.to('#subscribeDotLink', {border: 'unset'})
 tl23.to('#profitDot', {backgroundColor: '#afc7b1'})
+tl23.to('#profitDotLink', {border: 'unset'})
 tl23.to('#capabilitiesDot', {backgroundColor: '#afc7b1'})
+tl23.to('#capabilitiesDotLink', {border: 'unset'})
 tl23.to('#secureDot', {backgroundColor: '#afc7b1'})
+tl23.to('#secureDotLink', {border: 'unset'})
 tl23.to('#partnersDot', {backgroundColor: '#afc7b1'})
+tl23.to('#partnersDotLink', {border: 'unset'})
 tl23.to('#rewievsDot', {backgroundColor: '#00860B'})
+tl23.to('#rewievsDotLink', {border: '0.2rem solid #00860B'})
 tl23.to('#helpDot', {backgroundColor: '#afc7b1'})
+tl23.to('#helpDotLink', {border: 'unset'})
 tl23.to('#joinDot', {backgroundColor: '#afc7b1'})
+tl23.to('#joinDotLink', {border: 'unset'})
 
 
 
@@ -782,13 +805,21 @@ ScrollTrigger.create({
 const tl24 = gsap.timeline();
 
 tl24.to('#subscribeDot', {backgroundColor: '#afc7b1'})
+tl24.to('#subscribeDotLink', {border: 'unset'})
 tl24.to('#profitDot', {backgroundColor: '#afc7b1'})
+tl24.to('#profitDotLink', {border: 'unset'})
 tl24.to('#capabilitiesDot', {backgroundColor: '#afc7b1'})
+tl24.to('#capabilitiesDotLink', {border: 'unset'})
 tl24.to('#secureDot', {backgroundColor: '#afc7b1'})
+tl24.to('#secureDotLink', {border: 'unset'})
 tl24.to('#partnersDot', {backgroundColor: '#afc7b1'})
+tl24.to('#partnersDotLink', {border: 'unset'})
 tl24.to('#rewievsDot', {backgroundColor: '#afc7b1'})
+tl24.to('#rewievsDotLink', {border: 'unset'})
 tl24.to('#helpDot', {backgroundColor: '#00860B'})
+tl24.to('#helpDotLink', {border: '0.2rem solid #00860B'})
 tl24.to('#joinDot', {backgroundColor: '#afc7b1'})
+tl24.to('#joinDotLink', {border: 'unset'})
 
 
 
@@ -804,13 +835,21 @@ ScrollTrigger.create({
 const tl25 = gsap.timeline();
 
 tl25.to('#subscribeDot', {backgroundColor: '#afc7b1'})
+tl25.to('#subscribeDotLink', {border: 'unset'})
 tl25.to('#profitDot', {backgroundColor: '#afc7b1'})
+tl25.to('#profitDotLink', {border: 'unset'})
 tl25.to('#capabilitiesDot', {backgroundColor: '#afc7b1'})
+tl25.to('#capabilitiesDotLink', {border: 'unset'})
 tl25.to('#secureDot', {backgroundColor: '#afc7b1'})
+tl25.to('#secureDotLink', {border: 'unset'})
 tl25.to('#partnersDot', {backgroundColor: '#afc7b1'})
+tl25.to('#partnersDotLink', {border: 'unset'})
 tl25.to('#rewievsDot', {backgroundColor: '#afc7b1'})
+tl25.to('#rewievsDotLink', {border: 'unset'})
 tl25.to('#helpDot', {backgroundColor: '#afc7b1'})
+tl25.to('#helpDotLink', {border: 'unset'})
 tl25.to('#joinDot', {backgroundColor: '#00860B'})
+tl25.to('#joinDotLink', {border: '0.2rem solid #00860B'})
 
 
 
@@ -824,4 +863,90 @@ ScrollTrigger.create({
 
 
 
+const tl26 = gsap.timeline();
+
+const arr26 = document.querySelectorAll('.bigTextAnimation1Span')
+
+arr26.forEach(e => {
+  tl26.from(e, {opacity: 0, x: -100, duration: 0.1})
+})
+
+
+ScrollTrigger.create({
+  animation: tl26,
+  trigger: '.itsprofitable__bottom-block',
+  start: 'top 40%',
+  end: 'top 80%',
+})
+
+
+
+// const tl27 = gsap.timeline();
+
+// const arr27 = document.querySelectorAll('.bigTextAnimation1Span')
+
+// arr27.forEach(e => {
+//   tl27.from(e, {opacity: 0, x: -100, duration: 0.1})
+// })
+
+
+// ScrollTrigger.create({
+//   animation: tl27,
+//   trigger: '.itsprofitable__bottom-block',
+//   start: 'top 40%',
+//   end: 'top 80%',
+// })
+
+
+const tl28 = gsap.timeline();
+
+const arr28 = document.querySelectorAll('.bigTextAnimation2Span')
+
+arr28.forEach(e => {
+  tl28.from(e, {opacity: 0, x: -100, duration: 0.1})
+})
+
+
+ScrollTrigger.create({
+  animation: tl28,
+  trigger: '.itsprofitable__bottom-block',
+  start: 'top 60%',
+  end: 'top 20%',
+})
+
+
+const tl29 = gsap.timeline();
+
+const arr29 = document.querySelectorAll('.bigTextAnimation3Span')
+
+arr29.forEach(e => {
+  tl29.from(e, {opacity: 0, x: -100, duration: 0.1})
+})
+
+
+ScrollTrigger.create({
+  animation: tl29,
+  trigger: '.itsprofitable__bottom-block',
+  start: 'top 60%',
+  end: 'top 20%',
+})
+
+
+
+const tl30 = gsap.timeline();
+
+const arr30 = document.querySelectorAll('.bigTextAnimation1Span')
+
+arr30.forEach(e => {
+  tl30.from(e, {opacity: 0, x: -100, duration: 0.1})
+})
+
+
+ScrollTrigger.create({
+  animation: tl30,
+  trigger: '#bigTextAnimation1',
+  start: 'top 60%',
+  end: 'top 20%',
+  markers: true,
+})
 

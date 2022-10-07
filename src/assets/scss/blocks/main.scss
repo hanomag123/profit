@@ -2419,6 +2419,7 @@ input::-moz-placeholder { color: $black; }
   font-weight: 800;
   font-size: 15rem;
   line-height: 17.6rem;
+  display: flex;
   @include breakpoint($xl-bp) {
     font-size: 10rem;
     line-height: 12rem;
