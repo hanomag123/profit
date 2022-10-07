@@ -248,6 +248,50 @@ if (emails.length>0) {
   })
 }
 
+const comeButtons = document.querySelectorAll('.come-button')
+const comeForm = document.querySelector('.come-form')
+
+if (comeForm && comeButtons.length > 0) {
+  comeButtons.forEach(el => {
+    el.addEventListener('click', () => {
+      comeForm.classList.add('page-login--active')
+      document.body.style.setProperty('overflow', 'hidden')
+      const overlay = comeForm.querySelector('.page-login__overlay')
+      const closeButton = comeForm.querySelector('.close-button')
+      closeButton.addEventListener('click', () => {
+        comeForm.classList.remove('page-login--active')
+        document.body.style.removeProperty('overflow')
+      })
+      overlay.addEventListener('click', () => {
+        comeForm.classList.remove('page-login--active')
+        document.body.style.removeProperty('overflow')
+      })
+    })
+  })
+}
+
+const loginbutton = document.querySelectorAll('.login-button')
+const loginForm = document.querySelector('.login-form')
+
+if (loginForm && loginbutton.length > 0) {
+  loginbutton.forEach(el => {
+    el.addEventListener('click', () => {
+      loginForm.classList.add('page-login--active')
+      document.body.style.setProperty('overflow', 'hidden')
+      const overlay = loginForm.querySelector('.page-login__overlay')
+      const closeButton = loginForm.querySelector('.close-button')
+      closeButton.addEventListener('click', () => {
+        loginForm.classList.remove('page-login--active')
+        document.body.style.removeProperty('overflow')
+      })
+      overlay.addEventListener('click', () => {
+        loginForm.classList.remove('page-login--active')
+        document.body.style.removeProperty('overflow')
+      })
+    })
+  })
+}
+
 const selectLang = document.querySelectorAll('.select-lang a')
 if (selectLang.length > 0) {
   selectLang.forEach(el => {

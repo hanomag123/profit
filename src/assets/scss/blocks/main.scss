@@ -25,6 +25,7 @@
     position: fixed;
     bottom: 25%;
     left: 9rem;
+    z-index: 2;
     a {
       width: 2rem;
       height: 2rem;
@@ -72,7 +73,47 @@
       opacity: 0.5;
       z-index: 1;
     }
+    .page-login__title {
+      font-weight: 800;
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+    .page-login__text {
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+    }
+    .page-login__forgot {
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+      text-align: end;
+    }
+    .page-login__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    .page-login__title-container {
+      width: max-content;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .sign-in__button {
+      text-decoration: underline;
+    }
     form {
+      position: relative;
+      .close-button {
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        width: 3rem;
+        height: 3rem;
+      }
       background-color: $white;
       padding: 5rem 10rem;
       border-radius: 0.5rem;
@@ -98,6 +139,31 @@
           line-height: 1.6rem;
         }
       }
+      .page-login__button {
+        width: 100%;
+      }
+    }
+  }
+  .page-login--active {
+    display: block;
+  }
+
+  .close-button {
+    position: relative;
+    border: 0;
+    background-color: unset;
+    padding: 0;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: 0.1rem;
+      background-color: $black;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
 
@@ -1580,6 +1646,7 @@ section.help {
   padding-top: 10rem;
   padding-bottom: 10rem;
   background: linear-gradient(180deg, #FFFFFF 0%, #F2F2F2 48.44%, #EEFFE7 90.62%, #FFFFFF 99.48%);
+  position: relative;
   @include breakpoint($lb-bp) {
     padding-top: 5rem;
   }
@@ -1841,7 +1908,110 @@ section.help {
 
 
 section.join{
-
+  position: relative;
+  .coins-block {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    .coins-block__wrapper {
+      width: 21rem;
+      height: 21rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      pointer-events: none;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .coin-1 {
+      top: -35rem;
+      right: 32.5rem;
+      @include breakpoint($xl-bp) {
+        top: -7.5rem;
+        right: 5rem;
+        width: 13rem;
+        height: 13rem;
+      }
+      @include breakpoint($sm-bp) {
+        top: -10.5rem;
+        right: 7rem;
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+    .coin-2 {
+      top: -18rem;
+      right: 13rem;
+      width: 19rem;
+      height: 19rem;
+      @include breakpoint($xl-bp) {
+        top: 20rem;
+        right: -2rem;
+        width: 12rem;
+        height: 13rem;
+      }
+      @include breakpoint($sm-bp) {
+        top: -8rem;
+        left: 3.5rem;
+        width: 11rem;
+        height: 11rem;
+      }
+    }
+    .coin-3 {
+      right: 35rem;
+      top: 19.5rem;
+      width: 18rem;
+      height: 18rem;
+      @include breakpoint($xl-bp) {
+        right: 0rem;
+        top: 49.5rem;
+        width: 12rem;
+        height: 12rem;
+      }
+      @include breakpoint($sm-bp) {
+        right: -0.5rem;
+        top: -1rem;
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+    .coin-4 {
+      top: unset;
+      left: 38.5rem;
+      top: 28rem;
+      width: 13rem;
+      height: 13rem;
+      @include breakpoint($xl-bp) {
+        left: 2rem;
+        top: unset;
+        bottom: -1.5rem;
+        width: 8rem;
+        height: 8rem;
+      }
+      @include breakpoint($sm-bp) {
+        display: none;
+      }
+    }
+    .coin-5 {
+      right: unset;
+      left: 24rem;
+      top: -2rem;
+      @include breakpoint($xl-bp) {
+        right: unset;
+        left: -0.5rem;
+        top: 53.5rem;
+        height: 13rem;
+        width: 13rem;
+      }
+      @include breakpoint($sm-bp) {
+        display: none;
+      }
+    }
+  }
   div.join__wrapper {
     padding-top: 10rem;
     padding-bottom: 10rem;

@@ -10,16 +10,68 @@
     <a id="joinDotLink" href="#join" ><div id="joinDot"></div></a>
   </div>
 
-  <div class="page-login">
+  <div class="page-login come-form">
     <div class="page-login__overlay"></div>
     <form action="">
-      <div>
-        <span class="bold30">Войти</span>
-        <div class="page-login__text sm18">У вас еще нет аккаунта? <span class="sign-in__button green">Зарегистрироваться</span></div>
+      <button type="reset" class="close-button"></button>
+      <div class="page-login__title-container">
+        <span class="page-login__title">Войти</span>
+        <div class="page-login__text">У вас еще нет аккаунта? <a class="sign-in__button green" href="#">Зарегистрироваться</a></div>
       </div>
-      <input type="text" placeholder="Логин" name="login">
-      <input type="password" placeholder="Пароль" name="password">
+      <div class="page-login__wrapper">
+        <input type="text" placeholder="Логин" name="login">
+        <input type="password" placeholder="Пароль" name="password">
+        <a href="#" class="page-login__forgot green">Забыли пароль?</a>
+      </div>
+      <button type="submit" class="page-login__button page-button bold22">Войти</button>
     </form>
+  </div>
+
+  <div class="page-login login-form">
+    <div class="page-login__overlay"></div>
+    <form>
+      <button type="reset" class="close-button"></button>
+      <div class="page-login__title-container">
+        <span class="page-login__title">Зарегистрироваться</span>
+        <div class="page-login__text">У вас уже есть аккаунт?<a class="sign-in__button green" href="#">Войти</a></div>
+      </div>
+      <div class="ref">
+        <input type="text" name="referalCode" placeholder="Реферальный код">
+        <span class="med14">Попросите реферальный код у того, кто рекомендовал сервис</span>
+      </div>
+      <div class="input-wrapper">
+        <input type="text" name="name" id='name' required>
+        <label for="name"><span class="reg16">Имя пользователя</span></label>
+      </div>
+      <div class="input-wrapper">
+        <input type="email" name="email" required id="email">
+        <label for="email"><span class="reg16">E-mail</span></label>
+      </div>
+      <div class="input-wrapper">
+        <input type="password" name="password" id="password" required>
+        <label for="password"><span class="reg16">Пароль</span></label>
+      </div>
+      <div class="input-wrapper">
+        <input type="password" name="secondPassword" required id="secondPassword">
+        <label for="secondPassword"><span class="reg16">Подтверждение пароля</span></label>
+      </div>
+      <input type="text" name="telegram" placeholder="Телеграмм">
+      <div class="checkbox-wrapper">
+          <input type="checkbox" id="box-2" required name="confirm">
+          <label for="box-2">Согласен с условиями пользовательского соглашения</label>
+      </div>
+      <button type="submit" class="page-button bold22">Зарегистрироваться</button>
+    </form>
+    <!-- <form action="">
+      
+
+      <div class="page-login__wrapper">
+        <input type="text" placeholder="Логин" name="login">
+        <input type="password" placeholder="Пароль" name="password">
+        <a href="#" class="page-login__forgot green">Забыли пароль?</a>
+      </div>
+      <button type="submit" class="page-login__button page-button bold22">Зарегистрироваться</button>
+    </form> -->
   </div>
 
   <section class="copy-block page-wrapper" id="copy-block">
@@ -74,7 +126,7 @@
         </span>
       </h1>
       <span class="reg26">PROFIT-RIDERS — сервис копирования сделок, выгодный для инвесторов и трейдеров</span>
-      <button class="page-button bold22">Начать зарабатывать</button>
+      <button class="page-button bold22 login-button">Начать зарабатывать</button>
     </div>
 
     <div class="copy-block__swiper">
@@ -666,7 +718,6 @@
   </section>
   <section class="help page-wrapper page-grid" id="help">
     <div></div>
-
     <div class="help__wrapper pl4">
       <h2 class="ex76">
         <span class="helpAnimate">П</span>
@@ -747,6 +798,13 @@
     <div></div>
 
     <div class="join__wrapper">
+      <div class="coins-block">
+        <div class="coins-block__wrapper coin-1"><img src="./assets/images/coins/coin-1.png" alt="coin"></div>
+        <div class="coins-block__wrapper coin-2"><img src="./assets/images/coins/coin-2.png" alt="coin"></div>
+        <div class="coins-block__wrapper coin-3"><img src="./assets/images/coins/coin-3.png" alt="coin"></div>
+        <div class="coins-block__wrapper coin-4"><img src="./assets/images/coins/coin-4.png" alt="coin"></div>
+        <div class="coins-block__wrapper coin-5"><img src="./assets/images/coins/coin-1.png" alt="coin"></div>
+      </div>
       <form>
         <h3 class="ex50">Присоединиться</h3>
         <div class="ref">

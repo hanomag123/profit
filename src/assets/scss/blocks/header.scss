@@ -8,7 +8,8 @@
       padding-top: 3.45rem;
       position: fixed;
       width: 100%;
-      background-color: #F1FFEA;
+      // background-color: #F1FFEA;
+      background: linear-gradient(180deg, #F1FFEA 80%, transparent 100%);
     }
     @include breakpoint($sm-bp) {
       padding-top: 2rem;
