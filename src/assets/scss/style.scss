@@ -297,3 +297,134 @@ animation: btnAnimation 0.5s ease-in-out;
 #coin5 {
   animation: coinAnimation5 3s ease-in-out infinite;
 }
+
+
+@keyframes endCoinAnimation1 {
+  0% { 
+    top: -35rem;
+    right: 32.5rem;
+    }
+
+
+  50% {
+    top: -1rem;
+    right: 45.5rem;
+  }
+
+
+
+  100% {
+    top: -35rem;
+    right: 32.5rem;
+  }
+}
+
+
+#endCoin1 {
+  animation: endCoinAnimation1 3s ease-in-out infinite;
+}
+
+
+@keyframes endCoinAnimation2 {
+  0% { 
+    top: -18rem;
+    right: 13rem;
+    }
+
+
+  50% {
+    top: -3rem;
+    right: 1rem;
+  }
+
+
+
+  100% {
+    top: -18rem;
+    right: 13rem;
+  }
+}
+
+
+#endCoin2 {
+  animation: endCoinAnimation2 3s ease-in-out infinite;
+}
+
+
+
+@keyframes endCoinAnimation3 {
+  0% { 
+    right: 35rem;
+    top: 19.5rem;
+    }
+
+
+  50% {
+    right: 15rem;
+    top: 39.5rem;
+  }
+
+
+
+  100% {
+    right: 35rem;
+    top: 19.5rem;
+  }
+}
+
+
+#endCoin3 {
+  animation: endCoinAnimation3 3s ease-in-out infinite;
+}
+
+
+
+@keyframes endCoinAnimation4 {
+  0% { 
+    left: 38.5rem;
+    top: 28rem;
+    }
+
+
+  50% {
+    left: 25.5rem;
+    top: 46rem;
+  }
+
+
+
+  100% {
+    left: 38.5rem;
+    top: 28rem;
+  }
+}
+
+#endCoin4 {
+  animation: endCoinAnimation4 3s ease-in-out infinite;
+}
+
+
+@keyframes endCoinAnimation5 {
+  0% { 
+    left: 24rem;
+    top: -2rem;
+    }
+
+
+  50% {
+    left: 13rem;
+    top: -16rem;
+  }
+
+
+
+  100% {
+    left: 24rem;
+    top: -2rem;
+  }
+}
+
+
+#endCoin5 {
+  animation: endCoinAnimation5 3s ease-in-out infinite;
+}
