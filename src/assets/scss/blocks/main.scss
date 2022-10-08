@@ -1,5 +1,14 @@
 
 .main {
+  width: 900vw;
+  display: flex;
+  height: 90vh;
+
+  section {
+    width: 100vw;
+    height: 100vw;
+    background-color: #f6fff1;
+  }
 
 
   @keyframes btnAnimation {

@@ -1124,6 +1124,31 @@ ScrollTrigger.create({
   // markers: true,
 })
 
+const tl33 = gsap.timeline();
+tl33.fromTo('.subscribe', {x: '-100%', y: '+100%'}, {y: 0})
+tl33.fromTo('.itsprofitable', {x: '-100%'}, {x: '-200%'})
+tl33.fromTo('.Capabilities', {x: '-400%'}, {x: '-300%'})
+tl33.fromTo('.secure', {x: '-500%'}, {x: '-400%'})
+tl33.fromTo('.partners', {x: '-600%'}, {x: '-500%'})
+tl33.fromTo('.rewievs', {x: '700%'}, {x: '-600%'})
+tl33.fromTo('.help', {x: '800%'}, {x: '-700%'})
+tl33.fromTo('.join', {x: '-900%'}, {x: '-800%'})
+
+
+
+
+const main = document.querySelector('.main')
+
+ScrollTrigger.create({
+  animation: tl33,
+  trigger: 'main',
+  start: 'top top',
+  end: () => main.offsetWidth / 2,
+  scrub: true,
+  pin: true,
+  // markers: true,
+})
+
 
 // const tl33 = gsap.timeline();
 
