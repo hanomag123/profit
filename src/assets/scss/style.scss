@@ -183,10 +183,9 @@ animation: btnAnimation 0.5s ease-in-out;
 
 
   50% {
-    top: -10rem;
-    right: 20rem;
+    top: -4rem;
+    right: 25rem;
   }
-
 
 
   100% {
@@ -196,7 +195,7 @@ animation: btnAnimation 0.5s ease-in-out;
 }
 
 #coin1 {
-  animation: coinAnimation1 10s ease-in-out infinite;
+  animation: coinAnimation1 5s ease-in-out infinite;
 }
 
 
@@ -209,8 +208,8 @@ animation: btnAnimation 0.5s ease-in-out;
 
 
   50% {
-    top: 15rem;
-    right: -7rem;
+    top: 12rem;
+    right: 0;
   }
 
 
@@ -222,7 +221,7 @@ animation: btnAnimation 0.5s ease-in-out;
 }
 
 #coin2 {
-  animation: coinAnimation2 10s ease-in-out infinite;
+  animation: coinAnimation2 10s ease-in-out infinite 1s;
 }
 
 
@@ -234,8 +233,8 @@ animation: btnAnimation 0.5s ease-in-out;
 
 
   50% {
-    top: 13.4rem;
-    right: 16rem;
+    top: 22rem;
+    right: 21rem;
   }
 
 
@@ -247,7 +246,7 @@ animation: btnAnimation 0.5s ease-in-out;
 }
 
 #coin3 {
-  animation: coinAnimation3 10s ease-in-out infinite;
+  animation: coinAnimation3 5s ease-in-out infinite .3s;
 }
 
 @keyframes coinAnimation4 {
@@ -258,8 +257,8 @@ animation: btnAnimation 0.5s ease-in-out;
 
 
   50% {
-    top: 36rem;
-    right: 12rem;
+    top: 30rem;
+    right: 1rem;
   }
 
 
@@ -271,7 +270,7 @@ animation: btnAnimation 0.5s ease-in-out;
 }
 
 #coin4 {
-  animation: coinAnimation4 10s ease-in-out infinite;
+  animation: coinAnimation4 7s ease-in-out infinite .7s;
 }
 
 @keyframes coinAnimation5 {
@@ -282,8 +281,8 @@ animation: btnAnimation 0.5s ease-in-out;
 
 
   50% {
-    top: 42.5rem;
-    right: 26.5rem;
+    top: 46.5rem;
+    right: 19.5rem;
   }
 
 

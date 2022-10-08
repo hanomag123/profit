@@ -31,6 +31,72 @@ SmoothScroll({
   touchpadSupport   : true,
 })
 
+const coins = document.querySelector('.capa-coins')
+const Capabilities = document.querySelector('.Capabilities')
+const anotherCoins = document.querySelector('.coins-block')
+let currentOffsetY = 0
+let currentOffsetX = 0
+let speed = 0.04
+let offsetScrollY = 0
+let offsetScrollX = 0
+let currentOffset = 0
+let offsetScroll = 0
+let prevScrollpos = window.pageYOffset;
+
+if (coins) {
+  Capabilities.addEventListener('mousemove', throttle(animate, 200))
+}
+
+document.addEventListener('scroll', () => {
+  let currentScrollPos = window.pageYOffset;
+  const scroll = currentScrollPos - prevScrollpos
+  if (coins.getBoundingClientRect().y - (innerHeight / 2)< 0 ) {
+    offsetScroll +=scroll
+    setTimeout(() => {
+      offsetScroll -=scroll
+    }, 150)
+  } 
+  if (anotherCoins.getBoundingClientRect().y - (innerHeight / 2)< 0 ) {
+    offsetScroll +=scroll
+    setTimeout(() => {
+      offsetScroll -=scroll
+    }, 150)
+  } 
+  prevScrollpos = currentScrollPos
+})
+
+function animate(event) {
+  offsetScrollY = event.clientY / 300
+  offsetScrollX = event.clientX / 300
+} 
+function throttle(callback, interval) {
+  let enableCall = true;
+
+  return function(...args) {
+    if (!enableCall) return;
+
+    enableCall = false;
+    callback.apply(this, args);
+    setTimeout(() => enableCall = true, interval);
+  }
+}
+
+function move() {
+    
+      currentOffsetY += (offsetScrollY - currentOffsetY) * speed
+      currentOffsetX += (offsetScrollX - currentOffsetX) * speed
+      currentOffset +=(offsetScroll - currentOffset) * 0.03
+      for(let coin of coins.children) {
+        const movingValue = coin.dataset.value
+        coin.style.setProperty('transform', `translate(${currentOffsetX * movingValue}px, ${currentOffsetY * movingValue}px)`)
+      }
+      coins.style.setProperty('transform', `translateY(${currentOffset}px)`)
+      anotherCoins.style.setProperty('transform', `translateY(${currentOffset}px)`)
+      
+      requestAnimationFrame(move)
+}
+
+move()
 
   class Menu {
     constructor(menuElement, buttonElement) {
