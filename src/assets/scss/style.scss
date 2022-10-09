@@ -196,6 +196,9 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #coin1 {
   animation: coinAnimation1 5s ease-in-out infinite;
+  @include breakpoint($sm-bp) {
+    animation: unset;
+  }
 }
 
 
@@ -222,6 +225,9 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #coin2 {
   animation: coinAnimation2 10s ease-in-out infinite 1s;
+  @include breakpoint($lb-bp) {
+    animation: unset;
+  }
 }
 
 
@@ -247,6 +253,9 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #coin3 {
   animation: coinAnimation3 5s ease-in-out infinite .3s;
+  @include breakpoint($lb-bp) {
+    animation: unset;
+  }
 }
 
 @keyframes coinAnimation4 {
@@ -271,6 +280,9 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #coin4 {
   animation: coinAnimation4 7s ease-in-out infinite .7s;
+  @include breakpoint($lb-bp) {
+    animation: unset;
+  }
 }
 
 @keyframes coinAnimation5 {
@@ -321,6 +333,9 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #endCoin1 {
   animation: endCoinAnimation1 10s ease-in-out infinite;
+  @include breakpoint($lb-bp) {
+    animation: unset;
+  }
 }
 
 
@@ -347,6 +362,9 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #endCoin2 {
   animation: endCoinAnimation2 10s ease-in-out infinite;
+  @include breakpoint($lb-bp) {
+    animation: unset;
+  }
 }
 
 
@@ -374,6 +392,9 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #endCoin3 {
   animation: endCoinAnimation3 10s ease-in-out infinite;
+  @include breakpoint($lb-bp) {
+    animation: unset;
+  }
 }
 
 
@@ -400,6 +421,9 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #endCoin4 {
   animation: endCoinAnimation4 10s ease-in-out infinite;
+  @include breakpoint($lb-bp) {
+    animation: unset;
+  }
 }
 
 
@@ -426,6 +450,9 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #endCoin5 {
   animation: endCoinAnimation5 10s ease-in-out infinite;
+  @include breakpoint($lb-bp) {
+    animation: unset;
+  }
 }
 
 

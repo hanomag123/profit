@@ -43,11 +43,20 @@ let currentOffset = 0
 let offsetScroll = 0
 let prevScrollpos = window.pageYOffset;
 
-if (coins) {
-  Capabilities.addEventListener('mousemove', throttle(animate, 200))
+if (window.matchMedia("(min-width: 768px)").matches) {
+  /* the viewport is at least 400 pixels wide */
+  if (coins) {
+    Capabilities.addEventListener('mousemove', throttle(animate, 200))
+  }
+  
+  document.addEventListener('scroll', throttle(scroll, 200))
+} else {
+  Capabilities.removeEventListener('mousemove', throttle)
+  document.removeEventListener('scroll', throttle)
+  /* the viewport is less than 400 pixels wide */
 }
 
-document.addEventListener('scroll', () => {
+function scroll() {
   let currentScrollPos = window.pageYOffset;
   const scroll = currentScrollPos - prevScrollpos
   if (coins.getBoundingClientRect().y - (innerHeight / 2)< 0 ) {
@@ -63,8 +72,7 @@ document.addEventListener('scroll', () => {
     }, 150)
   } 
   prevScrollpos = currentScrollPos
-})
-
+}
 function animate(event) {
   offsetScrollY = event.clientY / 300
   offsetScrollX = event.clientX / 300
