@@ -363,6 +363,7 @@
       box-sizing: border-box;
       width: 100%;
       overflow: hidden;
+      z-index: 0;
     }
     .copy-block__sw {
       .swiper-slide {
@@ -1127,6 +1128,7 @@
           grid-template-columns: 1fr;
         }
         div.swiper.Capabilities__swiper {
+          width: 100%;
           @include breakpoint($sm-bp) {
             width: 100%;
             box-sizing: border-box;
