@@ -535,8 +535,58 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     // если элемент появился
     if (entry.isIntersecting) {
+      console.log(entry)
       // добавить ему CSS-класс
       entry.target.setAttribute('id', 'animBtn');
+    }
+  });
+});
+
+const observer2 = new IntersectionObserver(en => {
+  // перебор записей
+  en.forEach(entry => {
+    // если элемент появился
+    if (entry.isIntersecting) {
+
+      // добавить ему CSS-класс
+      entry.target.setAttribute('id', 'subscribeSwip');
+    }
+  });
+});
+
+
+const observer3 = new IntersectionObserver(en => {
+  // перебор записей
+  en.forEach(entry => {
+    // если элемент появился
+    if (entry.isIntersecting) {
+
+      // добавить ему CSS-класс
+      entry.target.setAttribute('id', 'flip');
+    }
+  });
+});
+
+const observer4 = new IntersectionObserver(en => {
+  // перебор записей
+  en.forEach(entry => {
+    // если элемент появился
+    if (entry.isIntersecting) {
+
+      // добавить ему CSS-класс
+      entry.target.setAttribute('id', 'rewievsSwip');
+    }
+  });
+});
+
+const observer5 = new IntersectionObserver(en => {
+  // перебор записей
+  en.forEach(entry => {
+    // если элемент появился
+    if (entry.isIntersecting) {
+
+      // добавить ему CSS-класс
+      entry.target.setAttribute('id', 'opacityAnim');
     }
   });
 });
@@ -547,6 +597,36 @@ buttons.forEach(e => {
   observer.observe(e);
 })
 
+
+const swipAnim = document.querySelectorAll('.subscribe__swiper')
+
+swipAnim.forEach(e => {
+  observer2.observe(e);
+})
+
+const flipAnim = document.querySelectorAll('.profit__container-item')
+const rightBlock = document.querySelectorAll('.unicum')
+
+flipAnim.forEach(e => {
+  observer3.observe(e);
+})
+
+rightBlock.forEach(e => {
+  observer3.observe(e);
+})
+
+const review = document.querySelectorAll('.rewievs__swiper')
+
+review.forEach(e => {
+  observer4.observe(e);
+})
+
+
+const opacityText = document.querySelectorAll('.opacityText')
+
+opacityText.forEach(e => {
+  observer5.observe(e);
+})
 
 
 const tl = gsap.timeline();
@@ -596,12 +676,12 @@ const tl4 = gsap.timeline();
 tl4.from('#animeCardSlide1', {opacity: 0, x: -200, duration: 1})
 
 
-ScrollTrigger.create({
-  animation: tl4,
-  trigger: '.subscribe__swiper',
-  start: 'top 50%',
-  end: 'top 10%',
-})
+// ScrollTrigger.create({
+//   animation: tl4,
+//   trigger: '.subscribe__swiper',
+//   start: 'top 50%',
+//   end: 'top 10%',
+// })
 
 
 // const tl5 = gsap.timeline();
@@ -630,65 +710,65 @@ ScrollTrigger.create({
 })
 
 
-const tl6 = gsap.timeline();
+// const tl6 = gsap.timeline();
 
-tl6.from('#secure1', {y: -200})
-
-
-
-ScrollTrigger.create({
-  animation: tl6,
-  trigger: '.secure__container',
-  start: 'top 50%',
-  end: 'top 10%',
-  scrub: true,
-})
+// tl6.from('#secure1', {y: -200})
 
 
 
-const tl7 = gsap.timeline();
-
-tl7.from('#secure2', {y: -200})
-
-
-
-ScrollTrigger.create({
-  animation: tl7,
-  trigger: '.secure__container',
-  start: 'top 50%',
-  end: 'top 10%',
-  scrub: true,
-})
-
-
-const tl8 = gsap.timeline();
-
-tl8.from('#secure3', {y: 200})
+// ScrollTrigger.create({
+//   animation: tl6,
+//   trigger: '.secure__container',
+//   start: 'top 50%',
+//   end: 'top 10%',
+//   scrub: true,
+// })
 
 
 
-ScrollTrigger.create({
-  animation: tl8,
-  trigger: '.secure__container',
-  start: 'top 50%',
-  end: 'top 10%',
-  scrub: true,
-})
+// const tl7 = gsap.timeline();
 
-
-const tl9 = gsap.timeline();
-
-tl9.from('#secure4', {y: 200})
+// tl7.from('#secure2', {y: -200})
 
 
 
-ScrollTrigger.create({
-  animation: tl9,
-  trigger: '.secure__container',
-  start: 'top 50%',
-  end: 'top 10%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl7,
+//   trigger: '.secure__container',
+//   start: 'top 50%',
+//   end: 'top 10%',
+//   scrub: true,
+// })
+
+
+// const tl8 = gsap.timeline();
+
+// tl8.from('#secure3', {y: 200})
+
+
+
+// ScrollTrigger.create({
+//   animation: tl8,
+//   trigger: '.secure__container',
+//   start: 'top 50%',
+//   end: 'top 10%',
+//   scrub: true,
+// })
+
+
+// const tl9 = gsap.timeline();
+
+// tl9.from('#secure4', {y: 200})
+
+
+
+// ScrollTrigger.create({
+//   animation: tl9,
+//   trigger: '.secure__container',
+//   start: 'top 50%',
+//   end: 'top 10%',
+//   scrub: true,
+// })
 
 
 const tl10 = gsap.timeline();
@@ -1206,7 +1286,8 @@ ScrollTrigger.create({
   // markers: true,
 })
 
-const tl33 = gsap.timeline();
+if (window.matchMedia("(min-width: 1024px)").matches) {
+  const tl33 = gsap.timeline();
 tl33.fromTo('.subscribe', {x: '-100%', y: '+100%'}, {y: 0})
 tl33.fromTo('.itsprofitable', {x: '-100%'}, {x: '-200%'})
 tl33.fromTo('.Capabilities', {x: '-400%'}, {x: '-300%'})
@@ -1230,6 +1311,9 @@ ScrollTrigger.create({
   pin: true,
   // markers: true,
 })
+}
+
+
 
 
 // const tl33 = gsap.timeline();
