@@ -604,16 +604,24 @@ swipAnim.forEach(e => {
   observer2.observe(e);
 })
 
-const flipAnim = document.querySelectorAll('.profit__container-item')
-const rightBlock = document.querySelectorAll('.unicum')
+if (window.matchMedia("(min-width: 1024px)").matches) {
+  const flipAnim = document.querySelectorAll('.profit__container-item')
+  const rightBlock = document.querySelectorAll('.unicum')
 
-flipAnim.forEach(e => {
-  observer3.observe(e);
-})
+  flipAnim.forEach(e => {
+    observer3.observe(e);
+  })
 
-rightBlock.forEach(e => {
-  observer3.observe(e);
-})
+  rightBlock.forEach(e => {
+    observer3.observe(e);
+  })
+}
+
+
+
+
+
+
 
 const review = document.querySelectorAll('.rewievs__swiper')
 
@@ -629,33 +637,39 @@ opacityText.forEach(e => {
 })
 
 
-const tl = gsap.timeline();
+if (window.matchMedia("(min-width: 1024px)").matches) {
+  const tl = gsap.timeline();
 
-const arr = document.querySelectorAll('.letterAnim')
+  const arr = document.querySelectorAll('.letterAnim')
 
-arr.forEach(e => {
-  tl.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
-})
-
-
-ScrollTrigger.create({
-  animation: tl,
-  trigger: '.copy-block__wrapper',
-  start: 'top 40%',
-  end: 'top 80%',
-})
-
-const tl2 = gsap.timeline();
-
-tl2.from('#animSlide1', {opacity: 0, y: -300, duration: 1.5})
+  arr.forEach(e => {
+    tl.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
+  })
 
 
-ScrollTrigger.create({
-  animation: tl2,
-  trigger: '.copy-block__sw',
-  start: 'top 35%',
-  end: 'top 10%',
-})
+  ScrollTrigger.create({
+    animation: tl,
+    trigger: '.copy-block__wrapper',
+    start: 'top 40%',
+    end: 'top 80%',
+  })
+}
+
+
+if (window.matchMedia("(min-width: 1024px)").matches) {
+  const tl2 = gsap.timeline();
+
+  tl2.from('#animSlide1', {opacity: 0, y: -300, duration: 1.5})
+  
+  
+  ScrollTrigger.create({
+    animation: tl2,
+    trigger: '.copy-block__sw',
+    start: 'top 35%',
+    end: 'top 10%',
+  })
+
+
 
 
 const tl3 = gsap.timeline();
@@ -669,7 +683,7 @@ ScrollTrigger.create({
   start: 'top 35%',
   end: 'top 10%',
 })
-
+}
 
 const tl4 = gsap.timeline();
 
@@ -771,124 +785,124 @@ ScrollTrigger.create({
 // })
 
 
-const tl10 = gsap.timeline();
+// const tl10 = gsap.timeline();
 
-const arr10 = document.querySelectorAll('.letterSubscribeAnim')
+// const arr10 = document.querySelectorAll('.letterSubscribeAnim')
 
-arr10.forEach(e => {
-  tl10.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
-})
-
-
-ScrollTrigger.create({
-  animation: tl10,
-  trigger: '.subscribe__container',
-  start: 'top 40%',
-  end: 'top 80%',
-})
+// arr10.forEach(e => {
+//   tl10.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
+// })
 
 
-const tl11 = gsap.timeline();
-
-const arr11 = document.querySelectorAll('.itsprofitableAnimate')
-
-arr11.forEach(e => {
-  tl11.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
-})
-
-
-ScrollTrigger.create({
-  animation: tl11,
-  trigger: '.itsprofitable__wrapper',
-  start: 'top 40%',
-  end: 'top 80%',
-})
+// ScrollTrigger.create({
+//   animation: tl10,
+//   trigger: '.subscribe__container',
+//   start: 'top 40%',
+//   end: 'top 80%',
+// })
 
 
-const tl12 = gsap.timeline();
+// const tl11 = gsap.timeline();
 
-const arr12 = document.querySelectorAll('.CapabilitiesAnimate')
+// const arr11 = document.querySelectorAll('.itsprofitableAnimate')
 
-arr12.forEach(e => {
-  tl12.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
-})
-
-
-ScrollTrigger.create({
-  animation: tl12,
-  trigger: '.Capabilities__wrapper',
-  start: 'top 40%',
-  end: 'top 80%',
-})
+// arr11.forEach(e => {
+//   tl11.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
+// })
 
 
-const tl13 = gsap.timeline();
-
-const arr13 = document.querySelectorAll('.secureAnimate')
-
-arr13.forEach(e => {
-  tl13.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
-})
-
-
-ScrollTrigger.create({
-  animation: tl13,
-  trigger: '.secure__wrapper',
-  start: 'top 40%',
-  end: 'top 80%',
-})
+// ScrollTrigger.create({
+//   animation: tl11,
+//   trigger: '.itsprofitable__wrapper',
+//   start: 'top 40%',
+//   end: 'top 80%',
+// })
 
 
+// const tl12 = gsap.timeline();
 
-const tl14 = gsap.timeline();
+// const arr12 = document.querySelectorAll('.CapabilitiesAnimate')
 
-const arr14 = document.querySelectorAll('.partnersAnimater')
-
-arr14.forEach(e => {
-  tl14.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
-})
-
-
-ScrollTrigger.create({
-  animation: tl14,
-  trigger: '.partners__wrapper',
-  start: 'top 40%',
-  end: 'top 80%',
-})
+// arr12.forEach(e => {
+//   tl12.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
+// })
 
 
-const tl15 = gsap.timeline();
-
-const arr15 = document.querySelectorAll('.rewievsAnimate')
-
-arr15.forEach(e => {
-  tl15.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
-})
-
-
-ScrollTrigger.create({
-  animation: tl15,
-  trigger: '.rewievs__wrapper',
-  start: 'top 40%',
-  end: 'top 80%',
-})
+// ScrollTrigger.create({
+//   animation: tl12,
+//   trigger: '.Capabilities__wrapper',
+//   start: 'top 40%',
+//   end: 'top 80%',
+// })
 
 
-const tl16 = gsap.timeline();
+// const tl13 = gsap.timeline();
 
-const arr16 = document.querySelectorAll('.helpAnimate')
+// const arr13 = document.querySelectorAll('.secureAnimate')
 
-arr16.forEach(e => {
-  tl16.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
-})
+// arr13.forEach(e => {
+//   tl13.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
+// })
 
 
-ScrollTrigger.create({
-  animation: tl16,
-  trigger: '.help__wrapper',
-  start: 'top 40%',
-  end: 'top 80%',
-})
+// ScrollTrigger.create({
+//   animation: tl13,
+//   trigger: '.secure__wrapper',
+//   start: 'top 40%',
+//   end: 'top 80%',
+// })
+
+
+
+// const tl14 = gsap.timeline();
+
+// const arr14 = document.querySelectorAll('.partnersAnimater')
+
+// arr14.forEach(e => {
+//   tl14.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
+// })
+
+
+// ScrollTrigger.create({
+//   animation: tl14,
+//   trigger: '.partners__wrapper',
+//   start: 'top 40%',
+//   end: 'top 80%',
+// })
+
+
+// const tl15 = gsap.timeline();
+
+// const arr15 = document.querySelectorAll('.rewievsAnimate')
+
+// arr15.forEach(e => {
+//   tl15.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
+// })
+
+
+// ScrollTrigger.create({
+//   animation: tl15,
+//   trigger: '.rewievs__wrapper',
+//   start: 'top 40%',
+//   end: 'top 80%',
+// })
+
+
+// const tl16 = gsap.timeline();
+
+// const arr16 = document.querySelectorAll('.helpAnimate')
+
+// arr16.forEach(e => {
+//   tl16.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
+// })
+
+
+// ScrollTrigger.create({
+//   animation: tl16,
+//   trigger: '.help__wrapper',
+//   start: 'top 40%',
+//   end: 'top 80%',
+// })
 
 
 
@@ -1166,21 +1180,21 @@ ScrollTrigger.create({
 
 
 
-const tl26 = gsap.timeline();
+// const tl26 = gsap.timeline();
 
-const arr26 = document.querySelectorAll('.bigTextAnimation1Span')
+// const arr26 = document.querySelectorAll('.bigTextAnimation1Span')
 
-arr26.forEach(e => {
-  tl26.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
-})
+// arr26.forEach(e => {
+//   tl26.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
+// })
 
 
-ScrollTrigger.create({
-  animation: tl26,
-  trigger: '.itsprofitable__bottom-block',
-  start: 'top 40%',
-  end: 'top 80%',
-})
+// ScrollTrigger.create({
+//   animation: tl26,
+//   trigger: '.itsprofitable__bottom-block',
+//   start: 'top 40%',
+//   end: 'top 80%',
+// })
 
 
 
@@ -1201,76 +1215,76 @@ ScrollTrigger.create({
 // })
 
 
-const tl28 = gsap.timeline();
+// const tl28 = gsap.timeline();
 
-const arr28 = document.querySelectorAll('.bigTextAnimation2Span')
+// const arr28 = document.querySelectorAll('.bigTextAnimation2Span')
 
-arr28.forEach(e => {
-  tl28.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
-})
-
-
-ScrollTrigger.create({
-  animation: tl28,
-  trigger: '.itsprofitable__bottom-block',
-  start: 'top 60%',
-  end: 'top 20%',
-})
+// arr28.forEach(e => {
+//   tl28.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
+// })
 
 
-const tl29 = gsap.timeline();
-
-const arr29 = document.querySelectorAll('.bigTextAnimation3Span')
-
-arr29.forEach(e => {
-  tl29.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
-})
-
-
-ScrollTrigger.create({
-  animation: tl29,
-  trigger: '.itsprofitable__bottom-block',
-  start: 'top 60%',
-  end: 'top 20%',
-})
+// ScrollTrigger.create({
+//   animation: tl28,
+//   trigger: '.itsprofitable__bottom-block',
+//   start: 'top 60%',
+//   end: 'top 20%',
+// })
 
 
+// const tl29 = gsap.timeline();
 
-const tl30 = gsap.timeline();
+// const arr29 = document.querySelectorAll('.bigTextAnimation3Span')
 
-const arr30 = document.querySelectorAll('.bigTextAnimation1Span')
-
-arr30.forEach(e => {
-  tl30.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
-})
+// arr29.forEach(e => {
+//   tl29.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
+// })
 
 
-ScrollTrigger.create({
-  animation: tl30,
-  trigger: '#bigTextAnimation1',
-  start: 'top 60%',
-  end: 'top 20%',
-  // markers: true,
-})
+// ScrollTrigger.create({
+//   animation: tl29,
+//   trigger: '.itsprofitable__bottom-block',
+//   start: 'top 60%',
+//   end: 'top 20%',
+// })
 
 
 
-const tl31 = gsap.timeline();
+// const tl30 = gsap.timeline();
 
-const arr31 = document.querySelectorAll('.profit__container-item')
+// const arr30 = document.querySelectorAll('.bigTextAnimation1Span')
 
-arr31.forEach(e => {
-  tl31.to(e, {rotationY:'180_short'})
-})
+// arr30.forEach(e => {
+//   tl30.fromTo(e, {opacity: 0, x: -100, duration: 0.1}, {opacity: 1, x: 0, duration: 0.1})
+// })
 
 
-ScrollTrigger.create({
-  animation: tl31,
-  trigger: '.Capabilities',
-  start: 'top 60%',
-  end: 'top 20%',
-  // markers: true,
-})
+// ScrollTrigger.create({
+//   animation: tl30,
+//   trigger: '#bigTextAnimation1',
+//   start: 'top 60%',
+//   end: 'top 20%',
+//   // markers: true,
+// })
+
+
+
+// const tl31 = gsap.timeline();
+
+// const arr31 = document.querySelectorAll('.profit__container-item')
+
+// arr31.forEach(e => {
+//   tl31.to(e, {rotationY:'180_short'})
+// })
+
+
+// ScrollTrigger.create({
+//   animation: tl31,
+//   trigger: '.Capabilities',
+//   start: 'top 60%',
+//   end: 'top 20%',
+//   // markers: true,
+// })
 
 
 
@@ -1288,14 +1302,14 @@ ScrollTrigger.create({
 
 if (window.matchMedia("(min-width: 1024px)").matches) {
   const tl33 = gsap.timeline();
-tl33.fromTo('.subscribe', {x: '-100%', y: '+100%'}, {y: 0})
-tl33.fromTo('.itsprofitable', {x: '-100%'}, {x: '-200%'})
-tl33.fromTo('.Capabilities', {x: '-400%'}, {x: '-300%'})
-tl33.fromTo('.secure', {x: '-500%'}, {x: '-400%'})
-tl33.fromTo('.partners', {x: '-600%'}, {x: '-500%'})
-tl33.fromTo('.rewievs', {x: '700%'}, {x: '-600%'})
-tl33.fromTo('.help', {x: '800%'}, {x: '-700%'})
-tl33.fromTo('.join', {x: '-900%'}, {x: '-800%'})
+  tl33.fromTo('.subscribe', {x: '-100%', y: '+100%'}, {y: 0})
+  tl33.fromTo('.itsprofitable', {x: '-100%'}, {x: '-200%', delay: 0.5})
+  tl33.fromTo('.Capabilities', {x: '-400%'}, {x: '-300%', delay: 0.5})
+  tl33.fromTo('.secure', {x: '-500%'}, {x: '-400%', delay: 0.5})
+  tl33.fromTo('.partners', {x: '-600%'}, {x: '-500%', delay: 0.5})
+  tl33.fromTo('.rewievs', {x: '100%'}, {x: '-600%', delay: 0.5})
+  tl33.fromTo('.help', {x: '100%'}, {x: '-700%', delay: 0.5})
+  tl33.fromTo('.join', {x: '-900%'}, {x: '-800%', delay: 0.5})
 
 
 
