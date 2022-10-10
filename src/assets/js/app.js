@@ -41,6 +41,8 @@ SmoothScroll({
 const coins = document.querySelector('.capa-coins')
 const Capabilities = document.querySelector('.Capabilities')
 const anotherCoins = document.querySelector('.coins-block')
+const joinBlock = document.querySelector('.join')
+const newCoinsBlock = document.querySelector('.coins-block')
 let currentOffsetY = 0
 let currentOffsetX = 0
 let speed = 0.04
@@ -53,12 +55,16 @@ let prevScrollpos = window.pageYOffset;
 if (window.matchMedia("(min-width: 1025px)").matches) {
   /* the viewport is at least 400 pixels wide */
   if (coins) {
-    Capabilities.addEventListener('mousemove', throttle(animate, 200))
+    Capabilities.addEventListener('mousemove', throttle(animate, 100))
+
   }
-  
+  if (joinBlock) {
+      joinBlock.addEventListener('mousemove', throttle(animate, 100))
+  }
   // document.addEventListener('scroll', throttle(scroll, 200))
 } else {
   Capabilities.removeEventListener('mousemove', throttle)
+  joinBlock.removeEventListener('mousemove', throttle)
   // document.removeEventListener('scroll', throttle)
   /* the viewport is less than 400 pixels wide */
 }
@@ -102,6 +108,10 @@ function move() {
       currentOffsetX += (offsetScrollX - currentOffsetX) * speed
       currentOffset +=(offsetScroll - currentOffset) * 0.03
       for(let coin of coins.children) {
+        const movingValue = coin.dataset.value
+        coin.style.setProperty('transform', `translate(${currentOffsetX * movingValue}px, ${currentOffsetY * movingValue}px)`)
+      }
+      for(let coin of newCoinsBlock.children) {
         const movingValue = coin.dataset.value
         coin.style.setProperty('transform', `translate(${currentOffsetX * movingValue}px, ${currentOffsetY * movingValue}px)`)
       }
