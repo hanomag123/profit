@@ -9,7 +9,8 @@
     section {
       width: 100vw;
       height: 100vh;
-      background-color: #f6fff1;
+      background-color: $white;
+      overflow: hidden;
     }
   }
   
@@ -1271,6 +1272,7 @@
             right: 0;
             width: 13rem;
             height: 13rem;
+            will-change: transform;
             @include breakpoint($lb-bp) {
               bottom: 2.5rem;
               top: unset;

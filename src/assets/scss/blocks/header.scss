@@ -4,6 +4,7 @@
     justify-content: space-between;
     position: relative;
     z-index: 10;
+    background: linear-gradient(180deg, #F1FFEA 80%, transparent 100%), $white;
     @include breakpoint($xl-bp) {
       padding-top: 3.45rem;
       position: fixed;
