@@ -50,16 +50,16 @@ let currentOffset = 0
 let offsetScroll = 0
 let prevScrollpos = window.pageYOffset;
 
-if (window.matchMedia("(min-width: 768px)").matches) {
+if (window.matchMedia("(min-width: 1025px)").matches) {
   /* the viewport is at least 400 pixels wide */
   if (coins) {
     Capabilities.addEventListener('mousemove', throttle(animate, 200))
   }
   
-  document.addEventListener('scroll', throttle(scroll, 200))
+  // document.addEventListener('scroll', throttle(scroll, 200))
 } else {
   Capabilities.removeEventListener('mousemove', throttle)
-  document.removeEventListener('scroll', throttle)
+  // document.removeEventListener('scroll', throttle)
   /* the viewport is less than 400 pixels wide */
 }
 
@@ -105,8 +105,8 @@ function move() {
         const movingValue = coin.dataset.value
         coin.style.setProperty('transform', `translate(${currentOffsetX * movingValue}px, ${currentOffsetY * movingValue}px)`)
       }
-      coins.style.setProperty('transform', `translateY(${currentOffset}px)`)
-      anotherCoins.style.setProperty('transform', `translateY(${currentOffset}px)`)
+      // coins.style.setProperty('transform', `translateY(${currentOffset}px)`)
+      // anotherCoins.style.setProperty('transform', `translateY(${currentOffset}px)`)
       
       requestAnimationFrame(move)
 }

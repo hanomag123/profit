@@ -1971,7 +1971,10 @@ section.help {
         transform-style: preserve-3d;
         position: relative;
         width: 100%;
-        height: 100%;
+        height: 51rem;
+        @include breakpoint($sm-bp) {
+          height: 34.6rem;
+        }
       }
 
       .rightHiddenBlock {
