@@ -1,14 +1,18 @@
 
 .main {
-  width: 900vw;
-  display: flex;
-  height: 90vh;
 
-  section {
-    width: 100vw;
-    height: 100vw;
-    background-color: #f6fff1;
+  @media (min-width: 1024px) {
+    width: 900vw;
+    display: flex;
+    height: 90vh;
+  
+    section {
+      width: 100vw;
+      height: 100vh;
+      background-color: #f6fff1;
+    }
   }
+  
 
 
   @keyframes btnAnimation {
@@ -1160,6 +1164,8 @@
               transition: transform 0.5s;
               transform-style: preserve-3d;
 
+              
+
               // animation: flipAnim 3s ease-in-out;
               
               .hiddenText {
@@ -2233,7 +2239,7 @@ section.join{
     padding-top: 10rem;
     padding-bottom: 10rem;
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
     @include breakpoint($lb-bp) {
       padding-top: 5rem;
