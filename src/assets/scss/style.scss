@@ -336,7 +336,7 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #endCoin1 {
   animation: endCoinAnimation1 10s ease-in-out infinite;
-  @include breakpoint($lb-bp) {
+  @include breakpoint($xl-bp) {
     animation: unset;
   }
 }
@@ -365,7 +365,7 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #endCoin2 {
   animation: endCoinAnimation2 10s ease-in-out infinite;
-  @include breakpoint($lb-bp) {
+  @include breakpoint($xl-bp) {
     animation: unset;
   }
 }
@@ -395,7 +395,7 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #endCoin3 {
   animation: endCoinAnimation3 10s ease-in-out infinite;
-  @include breakpoint($lb-bp) {
+  @include breakpoint($xl-bp) {
     animation: unset;
   }
 }
@@ -424,7 +424,7 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #endCoin4 {
   animation: endCoinAnimation4 10s ease-in-out infinite;
-  @include breakpoint($lb-bp) {
+  @include breakpoint($xl-bp) {
     animation: unset;
   }
 }
@@ -453,7 +453,7 @@ animation: btnAnimation 0.5s ease-in-out;
 
 #endCoin5 {
   animation: endCoinAnimation5 10s ease-in-out infinite;
-  @include breakpoint($lb-bp) {
+  @include breakpoint($xl-bp) {
     animation: unset;
   }
 }

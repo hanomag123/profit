@@ -1,7 +1,8 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
 
-//= components/
 
 SmoothScroll({
   // Время скролла 400 = 0.4 секунды
@@ -339,6 +340,34 @@ if (emails.length>0) {
   })
 }
 
+const overlays = document.querySelectorAll('.page-login__overlay')
+
+if (overlays.length > 0) {
+  overlays.forEach(el => {
+    el.addEventListener('click', function close() {
+      const form = this.closest('.page-login')
+      if (form) {
+        form.classList.remove('page-login--active')
+        document.body.style.removeProperty('overflow')
+      }
+    })
+  })
+}
+
+const closeButtons = document.querySelectorAll('.page-login .close-button')
+
+if (closeButtons.length > 0) {
+  closeButtons.forEach(el => {
+    el.addEventListener('click', function close() {
+      const form = this.closest('.page-login')
+      if (form) {
+        form.classList.remove('page-login--active')
+        document.body.style.removeProperty('overflow')
+      }
+    })
+  })
+}
+
 const comeButtons = document.querySelectorAll('.come-button')
 const comeForm = document.querySelector('.come-form')
 
@@ -347,20 +376,18 @@ if (comeForm && comeButtons.length > 0) {
     el.addEventListener('click', () => {
       comeForm.classList.add('page-login--active')
       document.body.style.setProperty('overflow', 'hidden')
-      const overlay = comeForm.querySelector('.page-login__overlay')
-      const closeButton = comeForm.querySelector('.close-button')
       const resetButton = comeForm.querySelector('button[type="button"]')
       resetButton.addEventListener('click', () => {
         comeForm.classList.remove('page-login--active')
       })
-      closeButton.addEventListener('click', () => {
-        comeForm.classList.remove('page-login--active')
-        document.body.style.removeProperty('overflow')
-      })
-      overlay.addEventListener('click', () => {
-        comeForm.classList.remove('page-login--active')
-        document.body.style.removeProperty('overflow')
-      })
+      // closeButton.addEventListener('click', () => {
+      //   comeForm.classList.remove('page-login--active')
+      //   document.body.style.removeProperty('overflow')
+      // })
+      // overlay.addEventListener('click', () => {
+      //   comeForm.classList.remove('page-login--active')
+      //   document.body.style.removeProperty('overflow')
+      // })
     })
   })
 }
@@ -373,21 +400,19 @@ if (loginForm && loginbutton.length > 0) {
     el.addEventListener('click', () => {
       loginForm.classList.add('page-login--active')
       document.body.style.setProperty('overflow', 'hidden')
-      const overlay = loginForm.querySelector('.page-login__overlay')
-      const closeButton = loginForm.querySelector('.close-button')
       const resetButton = loginForm.querySelector('button[type="button"]')
       resetButton.addEventListener('click', () => {
         loginForm.classList.remove('page-login--active')
       })
-      closeButton.addEventListener('click', () => {
-        loginForm.classList.remove('page-login--active')
-        document.body.style.removeProperty('overflow')
-      })
+      // closeButton.addEventListener('click', () => {
+      //   loginForm.classList.remove('page-login--active')
+      //   document.body.style.removeProperty('overflow')
+      // })
 
-      overlay.addEventListener('click', () => {
-        loginForm.classList.remove('page-login--active')
-        document.body.style.removeProperty('overflow')
-      })
+      // overlay.addEventListener('click', () => {
+      //   loginForm.classList.remove('page-login--active')
+      //   document.body.style.removeProperty('overflow')
+      // })
     })
   })
 }
@@ -1313,13 +1338,13 @@ ScrollTrigger.create({
 if (window.matchMedia("(min-width: 1024px)").matches) {
   const tl33 = gsap.timeline();
   tl33.fromTo('.subscribe', {x: '-100%', y: '+100%'}, {y: 0})
-  tl33.fromTo('.itsprofitable', {x: '-100%'}, {x: '-200%', delay: 0.5})
-  tl33.fromTo('.Capabilities', {x: '-400%'}, {x: '-300%', delay: 0.5})
-  tl33.fromTo('.secure', {x: '-500%'}, {x: '-400%', delay: 0.5})
-  tl33.fromTo('.partners', {x: '-600%'}, {x: '-500%', delay: 0.5})
-  tl33.fromTo('.rewievs', {x: '100%'}, {x: '-600%', delay: 0.5})
-  tl33.fromTo('.help', {x: '100%'}, {x: '-700%', delay: 0.5})
-  tl33.fromTo('.join', {x: '-900%'}, {x: '-800%', delay: 0.5})
+  tl33.fromTo('.itsprofitable', {x: '-100%'}, {x: '-200%', delay: 1})
+  tl33.fromTo('.Capabilities', {x: '-400%'}, {x: '-300%', delay: 1})
+  tl33.fromTo('.secure', {x: '-500%'}, {x: '-400%', delay: 1})
+  tl33.fromTo('.partners', {x: '-600%'}, {x: '-500%', delay: 1})
+  tl33.fromTo('.rewievs', {x: '100%'}, {x: '-600%', delay: 1})
+  tl33.fromTo('.help', {x: '100%'}, {x: '-700%', delay: 1})
+  tl33.fromTo('.join', {x: '-900%'}, {x: '-800%', delay: 1})
 
 
 
